@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GSCMIB>
+  <Telemetry>
+    <ServiceType name="Global Param" value="3">
+      <ServiceSubtype name="Beacon" value="25">
+        <Parameter name="vbatt" isLittleEndian="false" type="uint16" description="EPS,Battery Voltage" unit="mV"/>
+        <Parameter name="Batt_Curr" isLittleEndian="false" type="uint16" description="EPS,Output Current" unit="mA"/>
+        <Parameter name="3v3_curr" isLittleEndian="false" type="uint16" description="EPS,3v3 Output Current" unit="mA"/>
+        <Parameter name="5v_curr" isLittleEndian="false" type="uint16" description="EPS,5v Output Current" unit="mA"/>
+        <Parameter name="LOtrxvu_temp" isLittleEndian="false" type="uint16" description="Comms,Local Oscillator Temp" unit="deg c" rangeStart="-40" rangeEnd="60" calibration="7"/>
+        <Parameter name="PAtrxvu_temp" isLittleEndian="false" type="uint16" description="Comms,Power Amplifier Temp" unit="deg c" rangeStart="-40" rangeEnd="95" calibration="7"/>
+        <Parameter name="Eps_temp[0]" isLittleEndian="false" type="int16" description="EPS,Board Temp Sensor 0" unit="deg c" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="Eps_temp[1]" isLittleEndian="false" type="int16" description="EPS,Board Temp Sensor 1" unit="deg c" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="Eps_temp[2]" isLittleEndian="false" type="int16" description="EPS,Board Temp Sensor 2" unit="deg c" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="Eps_temp[3]" isLittleEndian="false" type="int16" description="EPS,Board Temp Sensor 3" unit="deg c" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="Batt_temp[0]" isLittleEndian="false" type="int16" description="EPS,Battery Temp Sensor 0" unit="deg c" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="Batt_temp[1]" isLittleEndian="false" type="int16" description="EPS,Battery Temp Sensor 1" unit="deg c" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="Rxdoppler" isLittleEndian="false" type="uint16" description="Comms,RX Doppler" unit="Hz" rangeStart="0" rangeEnd="45" calibration="6"/>
+        <Parameter name="Rxrssi" isLittleEndian="false" type="uint16" description="Comms,RX RSSI" unit="dBm" calibration="5"/>
+        <Parameter name="Txrefl" isLittleEndian="false" type="uint16" description="Comms,TX Reflected SWR" unit="mW"/>
+        <Parameter name="Txfrow" isLittleEndian="false" type="uint16" description="Comms,TX Forward SWR" unit="mW"/>
+        <Parameter name="AltitudeAngelsRoll" isLittleEndian="false" type="int16" description="ADCS,Attitude Angles Roll" unit="deg"/>
+        <Parameter name="AltitudeAngelsPich" isLittleEndian="false" type="int16" description="ADCS,Attitude Angles Pitch" unit="deg"/>
+        <Parameter name="AltitudeAngelsYaw" isLittleEndian="false" type="int16" description="ADCS,Attitude Angles Yaw" unit="deg"/>
+        <Parameter name="FileSystem last error" isLittleEndian="false" type="byte" description="OBC,File System Last Error"/>
+        <Parameter name="EPS battery state" isLittleEndian="false" type="byte" description="EPS,Logic State Number"/>
+        <Parameter name="NumberDelayd_comms" isLittleEndian="false" type="byte" description="OBC,Number of Stored Delayed Commands"/>
+        <Parameter name="Number_Resets" isLittleEndian="false" type="uint32" description="OBC,Number of Resets"/>
+        <Parameter name="Last_Resets" isLittleEndian="false" type="datetime" description="OBC,Last Boot Time" unit="sec"/>
+        <Parameter name="states" isLittleEndian="false" type="byte" description="OBC,Magic number that only Elai can understand"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="Gecko Registers" value="10">
+      <ServiceSubtype name="Gecko Registers" value="107">
+        <Parameter name="Register 0" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 1" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 2" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 3" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 4" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 5" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 6" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 7" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 8" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 9" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 10" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 11" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 12" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 13" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Register 14" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="image dump" value="11">
+      <ServiceSubtype name="thumbnail6" value="98">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="thumbnail5" value="99">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="thumbnail4" value="100">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="thumbnail3" value="101">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="thumbnail2" value="102">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="thumbnail1" value="103">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="raw" value="104">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="jpeg" value="105">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="first jpeg packet" value="106">
+        <Parameter name="image id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="file size" isLittleEndian="true" type="uint32"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="Download ImageDataBase" value="12">
+      <ServiceSubtype name="ImageDataBase packet" value="96">
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="first ImageDataBase packet" value="97">
+        <Parameter name="index" isLittleEndian="true" type="uint16"/>
+        <Parameter name="size" isLittleEndian="true" type="uint32"/>
+        <Parameter name="chunk data" isLittleEndian="true" type="string" size="208"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="General" value="13">
+      <ServiceSubtype name="Log events" value="49">
+        <Parameter name="log num" isLittleEndian="true" type="int32" unit="x"/>
+        <Parameter name="info" isLittleEndian="true" type="int32" unit="x"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Log errors" value="50">
+        <Parameter name="log num" isLittleEndian="true" type="int32" unit="x"/>
+        <Parameter name="info" isLittleEndian="true" type="int32" unit="x"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Ack" value="90">
+        <Parameter name="CommandId" isLittleEndian="false" type="uint32" description="ID of relevant command" unit="mV" rangeStart="0" rangeEnd="999999"/>
+        <Parameter name="AckType" isLittleEndian="false" type="byte" description="Type of ack" unit="x"/>
+        <Parameter name="ErrorType" isLittleEndian="false" type="byte" description="Type of error (if there is)" unit="x"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="FRAM" value="42">
+      <ServiceSubtype name="read data" value="44">
+        <Parameter name="data" isLittleEndian="true" type="string" size="227"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="TLM- eps,comm,file systems" value="88">
+      <ServiceSubtype name="EPS" value="50">
+        <Parameter name="photoVoltaic3" isLittleEndian="true" type="uint16" unit="mV" rangeStart="0" rangeEnd="20328"/>
+        <Parameter name="photoVoltaic2" isLittleEndian="true" type="uint16" unit="mV" rangeStart="0" rangeEnd="18392"/>
+        <Parameter name="photoVoltaic1" isLittleEndian="true" type="uint16" unit="mV" rangeStart="0" rangeEnd="6776"/>
+        <Parameter name="photoCurrent3" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="712"/>
+        <Parameter name="photoCurrent2" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="712"/>
+        <Parameter name="photoCurrent1" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="712"/>
+        <Parameter name="total photoCurrent" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2000"/>
+        <Parameter name="battery voltage" isLittleEndian="true" type="uint16" unit="mV" rangeStart="6000" rangeEnd="16800"/>
+        <Parameter name="systemCurrent0" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="currentChanel1" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel2" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel3" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel4" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel5" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel6" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="P31uBoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp2" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp3" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp4" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp2" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="number of EPS reboots" isLittleEndian="true" type="uint32" unit="counter"/>
+        <Parameter name="cause of last reset" isLittleEndian="false" type="byte" rangeStart="255" rangeEnd="255"/>
+        <Parameter name="ppt_mode" isLittleEndian="false" type="byte" unit="can be 1/2/3" rangeStart="1" rangeEnd="3"/>
+        <Parameter name="channelStatus" isLittleEndian="true" type="byte" unit="every bit"/>
+        <Parameter name="systemState" isLittleEndian="true" type="byte" unit="ԅ(≖‿≖ԅ)"/>
+        <Parameter name="EPS state number" isLittleEndian="true" type="byte" unit="every bit"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Comm" value="51">
+        <Parameter name="bus_volt" isLittleEndian="true" type="uint16" unit="V" rangeStart="6" rangeEnd="20" calibration="8"/>
+        <Parameter name="total_current" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="600" calibration="9"/>
+        <Parameter name="Txrefl" isLittleEndian="true" type="uint16" unit="mW"/>
+        <Parameter name="Txfrow" isLittleEndian="true" type="uint16" unit="mW"/>
+        <Parameter name="Rxrssi" isLittleEndian="true" type="uint16" unit="dBm" calibration="5"/>
+        <Parameter name="pa_temp" isLittleEndian="true" type="uint16" unit="deg" rangeStart="-40" rangeEnd="95" calibration="7"/>
+        <Parameter name="locosc_temp" isLittleEndian="true" type="uint16" unit="deg" rangeStart="-40" rangeEnd="60" calibration="7"/>
+        <Parameter name="ant_temp_A" isLittleEndian="true" type="uint16" unit="deg" rangeStart="-20" rangeEnd="60" calibration="19"/>
+        <Parameter name="ant_temp_B" isLittleEndian="true" type="uint16" unit="deg" rangeStart="-20" rangeEnd="60" calibration="19"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Cam" value="52">
+        <Parameter name="VoltageInput5V" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentInput5V" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageFPGA1V" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentFPGA1V" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageFPGA1V8" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentFPGA1V8" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageFPGA2V5" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentFPGA2V5" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageFPGA3V3" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentFPGA3V3" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageFlash1V8" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentFlash1V8" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageFlash3V3" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentFlash3V3" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageSNSR1V8" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentSNSR1V8" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageSNSR3V3" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentSNSR3V3" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageSNSRVDDPIX" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="CurrentSNSRVDDPIX" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="VoltageFlashVTT09" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="TempSMU3AB" isLittleEndian="true" type="float" unit="degC"/>
+        <Parameter name="TempSMU3BC" isLittleEndian="true" type="float" unit="degC"/>
+        <Parameter name="TempREGU6" isLittleEndian="true" type="float" unit="degC"/>
+        <Parameter name="TempREGU8" isLittleEndian="true" type="float" unit="degC"/>
+        <Parameter name="TempFlash" isLittleEndian="true" type="float" unit="degC"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="SolarPanels" value="53">
+        <Parameter name="solarPanel0Temp" isLittleEndian="true" type="int32" unit="degC" rangeStart="-40" rangeEnd="85" calibration="10"/>
+        <Parameter name="solarPanel1Temp" isLittleEndian="true" type="int32" unit="degC" rangeStart="-40" rangeEnd="85" calibration="10"/>
+        <Parameter name="solarPanel2Temp" isLittleEndian="true" type="int32" unit="degC" rangeStart="-40" rangeEnd="85" calibration="10"/>
+        <Parameter name="solarPanel3Temp" isLittleEndian="true" type="int32" unit="degC" rangeStart="-40" rangeEnd="85" calibration="10"/>
+        <Parameter name="solarPanel4Temp" isLittleEndian="true" type="int32" unit="degC" rangeStart="-40" rangeEnd="85" calibration="10"/>
+        <Parameter name="solarPanel5Temp" isLittleEndian="true" type="int32" unit="degC" rangeStart="-40" rangeEnd="85" calibration="10"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="gom_eps_hkparam_t" value="55">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="photoVoltaic3" isLittleEndian="true" type="uint16" unit="mV" rangeStart="0" rangeEnd="20328"/>
+        <Parameter name="photoVoltaic2" isLittleEndian="true" type="uint16" unit="mV" rangeStart="0" rangeEnd="18392"/>
+        <Parameter name="photoVoltaic1" isLittleEndian="true" type="uint16" unit="mV" rangeStart="0" rangeEnd="6776"/>
+        <Parameter name="total photoCurrent" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2000"/>
+        <Parameter name="battery voltage" isLittleEndian="true" type="uint16" unit="mV" rangeStart="6000" rangeEnd="16800"/>
+        <Parameter name="systemCurrent" isLittleEndian="true" type="uint16" unit="mA"/>
+        <Parameter name="photovoltaicPowerConverterTemp1" isLittleEndian="true" type="int16" unit="degC"/>
+        <Parameter name="photovoltaicPowerConverterTemp2" isLittleEndian="true" type="int16" unit="degC"/>
+        <Parameter name="photovoltaicPowerConverterTemp3" isLittleEndian="true" type="int16" unit="degC"/>
+        <Parameter name="P31uBatteryTemp" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp0" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="latchUp3v3Channel3" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchUp3v3Channel2" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchUp3v3Channel1" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchUp5vChannel3" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchUp5vChannel2" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchUp5vChannel1" isLittleEndian="true" type="uint16"/>
+        <Parameter name="reset" isLittleEndian="true" type="byte"/>
+        <Parameter name="bootCount" isLittleEndian="true" type="uint16"/>
+        <Parameter name="swErrors" isLittleEndian="true" type="uint16"/>
+        <Parameter name="ppt_mode" isLittleEndian="true" type="byte"/>
+        <Parameter name="gom_eps_channelstates_t channelStatus" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="gom_eps_hk_t" value="56">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="boostConverterCurrent[0]" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="boostConverterCurrent[1]" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="boostConverterCurrent[2]" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="battery voltage" isLittleEndian="true" type="uint16" unit="mV" rangeStart="6000" rangeEnd="16800"/>
+        <Parameter name="photoCurrentIn[0]" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="508"/>
+        <Parameter name="photoCurrentIn[1]" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="508"/>
+        <Parameter name="photoCurrentIn[2]" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="508"/>
+        <Parameter name="boostConverterCurrent" isLittleEndian="true" type="uint16"/>
+        <Parameter name="systemCurrent" isLittleEndian="true" type="uint16"/>
+        <Parameter name="reserved1" isLittleEndian="true" type="uint16"/>
+        <Parameter name="currentChanel0" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel1" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel2" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel3" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel4" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel5" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="output[0]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output[1]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output[2]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output[3]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output[4]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output[5]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output[6]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output[7]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_on_delta[0]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[1]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[2]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[3]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[4]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[5]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[6]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[7]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[0]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[1]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[2]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[3]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[4]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[5]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[6]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_off_delta[7]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchup [0]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchup [1]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchup [2]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchup [3]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchup [4]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchup [5]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="wdt_i2c_time_left" isLittleEndian="true" type="uint32"/>
+        <Parameter name="wdt_gnd_time_left" isLittleEndian="true" type="uint32"/>
+        <Parameter name="wdt_csp_pings_left [0]" isLittleEndian="true" type="byte"/>
+        <Parameter name="wdt_csp_pings_left [1]" isLittleEndian="true" type="byte"/>
+        <Parameter name="counter_wdt_i2c" isLittleEndian="true" type="uint32"/>
+        <Parameter name="counter_wdt_gnd" isLittleEndian="true" type="uint32"/>
+        <Parameter name="counter_wdt_csp [0]" isLittleEndian="true" type="uint32"/>
+        <Parameter name="counter_wdt_csp [1]" isLittleEndian="true" type="uint32"/>
+        <Parameter name="counter_boot" isLittleEndian="true" type="uint32"/>
+        <Parameter name="P31uBoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp2" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp3" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp0" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="bootCause" isLittleEndian="true" type="byte"/>
+        <Parameter name="battery_mode" isLittleEndian="true" type="byte" rangeStart="0" rangeEnd="0"/>
+        <Parameter name="ppt_mode" isLittleEndian="false" type="byte"/>
+        <Parameter name="reserved2" isLittleEndian="false" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="gom_eps_hk_vi_t" value="57">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="boostConverterCurrent0" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="boostConverterCurrent1" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="boostConverterCurrent2" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="battery voltage" isLittleEndian="true" type="uint16" unit="mV" rangeStart="6000" rangeEnd="16800"/>
+        <Parameter name="photoCurrentIn0" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="508"/>
+        <Parameter name="photoCurrentIn1" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="508"/>
+        <Parameter name="photoCurrentIn2" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="508"/>
+        <Parameter name="boostConverterCurrent" isLittleEndian="true" type="uint16"/>
+        <Parameter name="systemCurrent" isLittleEndian="true" type="uint16"/>
+        <Parameter name="reserved1" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="gom_eps_hk_out_t" value="58">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="currentChanel0" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel1" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel2" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel3" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel4" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="currentChanel5" isLittleEndian="true" type="uint16" unit="mA" rangeStart="0" rangeEnd="2500"/>
+        <Parameter name="output_on_delta[0]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[1]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[2]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[3]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[4]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[5]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[6]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="output_on_delta[7]" isLittleEndian="true" type="uint16"/>
+        <Parameter name="latchup[6]" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="gom_eps_hk_wdt_t" value="59">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="wdt_i2c_time_left" isLittleEndian="true" type="uint32"/>
+        <Parameter name="wdt_gnd_time_left" isLittleEndian="true" type="uint32"/>
+        <Parameter name="wdt_csp_pings_left[0]" isLittleEndian="true" type="byte"/>
+        <Parameter name="wdt_csp_pings_left[1]" isLittleEndian="true" type="byte"/>
+        <Parameter name="counter_wdt_i2c" isLittleEndian="true" type="uint32"/>
+        <Parameter name="counter_wdt_gnd" isLittleEndian="true" type="uint32"/>
+        <Parameter name="counter_wdt_csp[0]" isLittleEndian="true" type="uint32"/>
+        <Parameter name="counter_wdt_csp[1]" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="gom_eps_hk_basic_t" value="60">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="counter_boot" isLittleEndian="true" type="int32"/>
+        <Parameter name="P31uBoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp2" isLittleEndian="true" type="int16" unit="degC" rangeStart="-40" rangeEnd="125"/>
+        <Parameter name="P31uBoardTemp3" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp0" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="BP4BoardTemp1" isLittleEndian="true" type="int16" unit="degC" rangeStart="0" rangeEnd="45"/>
+        <Parameter name="bootCause" isLittleEndian="true" type="byte"/>
+        <Parameter name="battery_mode" isLittleEndian="true" type="byte" rangeStart="0" rangeEnd="0"/>
+        <Parameter name="ppt_mode" isLittleEndian="true" type="byte"/>
+        <Parameter name="reserved2" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="eps_config_t" value="61">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="ppt_mode" isLittleEndian="true" type="byte"/>
+        <Parameter name="batteryHeater_mode" isLittleEndian="true" type="byte"/>
+        <Parameter name="char batteryHeater_low" isLittleEndian="true" type="byte" unit="degC"/>
+        <Parameter name="char batteryHeater_high" isLittleEndian="true" type="byte" unit="degC"/>
+        <Parameter name="output_normal_value [0]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_normal_value [1]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_normal_value [2]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_normal_value [3]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_normal_value [4]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_normal_value [5]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_normal_value [6]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_normal_value [7]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [0]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [1]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [2]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [3]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [4]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [5]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [6]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_safe_value [7]" isLittleEndian="true" type="byte"/>
+        <Parameter name="output_initial_on_delay [0]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_on_delay [1]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_on_delay [2]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_on_delay [3]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_on_delay [4]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_on_delay [5]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_on_delay [6]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_on_delay [7]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [0]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [1]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [2]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [3]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [4]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [5]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [6]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="output_initial_off_delay [7]" isLittleEndian="true" type="uint16" unit="s"/>
+        <Parameter name="boostConverterCurrent [0]" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="boostConverterCurrent [1]" isLittleEndian="true" type="uint16" unit="mV"/>
+        <Parameter name="boostConverterCurrent [2]" isLittleEndian="true" type="uint16" unit="mV"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="eps_config2_t" value="62">
+        <Parameter name="commandReply" isLittleEndian="true" type="uint16"/>
+        <Parameter name="batt_maxvoltage" isLittleEndian="true" type="uint16"/>
+        <Parameter name="batt_safevoltage" isLittleEndian="true" type="uint16"/>
+        <Parameter name="batt_criticalvoltage" isLittleEndian="true" type="uint16"/>
+        <Parameter name="batt_normalvoltage" isLittleEndian="true" type="uint16"/>
+        <Parameter name="spare uint * 2" isLittleEndian="true" type="uint32"/>
+        <Parameter name="spare byte * 4" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISIStrxvuRxTelemetry" value="63">
+        <Parameter name="rx_doppler" isLittleEndian="true" type="uint16" calibration="6"/>
+        <Parameter name="rx_rssi" isLittleEndian="true" type="uint16" calibration="5"/>
+        <Parameter name="bus_volt" isLittleEndian="true" type="uint16" rangeStart="6" rangeEnd="20" calibration="8"/>
+        <Parameter name="vutotal_curr" isLittleEndian="true" type="uint16" rangeStart="0" rangeEnd="600" calibration="9"/>
+        <Parameter name="vutx_curr" isLittleEndian="true" type="uint16" calibration="9"/>
+        <Parameter name="vurx_curr" isLittleEndian="true" type="uint16" calibration="9"/>
+        <Parameter name="vupa_curr" isLittleEndian="true" type="uint16" calibration="9"/>
+        <Parameter name="pa_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="95" calibration="7"/>
+        <Parameter name="board_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="60" calibration="7"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISIStrxvuRxTelemetry_revC" value="64">
+        <Parameter name="rx_doppler" isLittleEndian="true" type="uint16" calibration="6"/>
+        <Parameter name="total_current" isLittleEndian="true" type="uint16" rangeStart="0" rangeEnd="600" calibration="9"/>
+        <Parameter name="bus_volt" isLittleEndian="true" type="uint16" rangeStart="6" rangeEnd="20" calibration="8"/>
+        <Parameter name="locosc_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="60" calibration="7"/>
+        <Parameter name="pa_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="95" calibration="7"/>
+        <Parameter name="rx_rssi" isLittleEndian="true" type="uint16" calibration="5"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISIStrxvuTxTelemetry" value="65">
+        <Parameter name="tx_reflpwr" isLittleEndian="true" type="uint16"/>
+        <Parameter name="tx_fwrdpwr" isLittleEndian="true" type="uint16"/>
+        <Parameter name="bus_volt" isLittleEndian="true" type="uint16" rangeStart="6" rangeEnd="20" calibration="8"/>
+        <Parameter name="vutotal_curr" isLittleEndian="true" type="uint16" rangeStart="0" rangeEnd="600" calibration="9"/>
+        <Parameter name="vutx_curr" isLittleEndian="true" type="uint16" calibration="9"/>
+        <Parameter name="vurx_curr" isLittleEndian="true" type="uint16" calibration="9"/>
+        <Parameter name="vupa_curr" isLittleEndian="true" type="uint16" calibration="9"/>
+        <Parameter name="pa_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="95" calibration="7"/>
+        <Parameter name="board_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="60" calibration="7"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISIStrxvuTxTelemetry" value="66">
+        <Parameter name="tx_reflpwr" isLittleEndian="true" type="uint16"/>
+        <Parameter name="tx_fwrdpwr" isLittleEndian="true" type="uint16"/>
+        <Parameter name="bus_volt" isLittleEndian="true" type="uint16" rangeStart="6" rangeEnd="20" calibration="8"/>
+        <Parameter name="total_current" isLittleEndian="true" type="uint16" rangeStart="0" rangeEnd="600" calibration="9"/>
+        <Parameter name="pa_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="95" calibration="7"/>
+        <Parameter name="locosc_temp" isLittleEndian="true" type="uint16" rangeStart="-40" rangeEnd="60" calibration="7"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISISantsStatus_A" value="67">
+        <Parameter name="Ants 4-3" isLittleEndian="false" type="bitmap" description="every bit">
+          <Bitfield name="armed" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant4Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant4timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant4undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant3Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant3timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant3undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ignoreflag" size="1" isNull="false" calibration="17"/>
+        </Parameter>
+        <Parameter name="Ants 1-2" isLittleEndian="false" type="bitmap" description="every bit">
+          <Bitfield name="ant2Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant2timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant2undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant1Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant1timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant1undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="empty" size="2" isNull="false" calibration="17"/>
+        </Parameter>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISISantsTelemetry_A" value="68">
+        <Parameter name="ants_temperature" isLittleEndian="true" type="uint16" rangeStart="-20" rangeEnd="60" calibration="19"/>
+        <Parameter name="ISISantsStatus ants_deployment" isLittleEndian="false" type="uint16"/>
+        <Parameter name="ants_uptime" isLittleEndian="false" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISISantS_getTemperature_A" value="69">
+        <Parameter name="temprature" isLittleEndian="true" type="uint16" rangeStart="-20" rangeEnd="60" calibration="19"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISISantsStatus_A" value="70">
+        <Parameter name="Ants 4-3" isLittleEndian="false" type="bitmap" description="every bit">
+          <Bitfield name="armed" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant4Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant4timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant4undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant3Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant3timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant3undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ignoreflag" size="1" isNull="false" calibration="17"/>
+        </Parameter>
+        <Parameter name="Ants 1-2" isLittleEndian="false" type="bitmap" description="every bit">
+          <Bitfield name="ant2Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant2timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant2undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant1Deploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant1timeout" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="ant1undeploying" size="1" isNull="false" calibration="17"/>
+          <Bitfield name="empty" size="2" isNull="false" calibration="17"/>
+        </Parameter>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISISantsTelemetry_A" value="71">
+        <Parameter name="ants_temperature" isLittleEndian="false" type="uint16" rangeStart="-20" rangeEnd="60" calibration="19"/>
+        <Parameter name="ISISantsStatus ants_deployment" isLittleEndian="true" type="uint16"/>
+        <Parameter name="ants_uptime" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ISISantS_getTemperature_B" value="72">
+        <Parameter name="temprature" isLittleEndian="true" type="uint16" rangeStart="-20" rangeEnd="60" calibration="19"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="File system space A" value="73">
+        <Parameter name="total" isLittleEndian="true" type="uint32" unit="byte"/>
+        <Parameter name="free" isLittleEndian="true" type="uint32" unit="byte"/>
+        <Parameter name="used" isLittleEndian="true" type="uint32" unit="byte"/>
+        <Parameter name="bad" isLittleEndian="true" type="uint32" unit="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="File system space B" value="74">
+        <Parameter name="total" isLittleEndian="true" type="uint32" unit="byte"/>
+        <Parameter name="free" isLittleEndian="true" type="uint32" unit="byte"/>
+        <Parameter name="used" isLittleEndian="true" type="uint32" unit="byte"/>
+        <Parameter name="bad" isLittleEndian="true" type="uint32" unit="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="File system space B" value="255">
+        <Parameter name="is empty 0" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 0" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 1" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 1" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 2" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 2" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 3" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 3" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 4" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 4" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 5" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 5" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 6" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 6" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 7" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 7" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 8" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 8" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+        <Parameter name="is empty 9" isLittleEndian="false" type="byte" unit="true/false"/>
+        <Parameter name="TM type 9" isLittleEndian="false" type="byte" unit="( ˇ෴ˇ )"/>
+        <Parameter name="stop time" isLittleEndian="true" type="datetime" unit="sec"/>
+        <Parameter name="period" isLittleEndian="true" type="uint32" unit="seconds"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="ADCS" value="154">
+      <ServiceSubtype name="ADCS_I2C_GENRIC_ST" value="0">
+        <Parameter name="Data" isLittleEndian="true" type="string" size="150"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_GENERAL_INFO_ST" value="128">
+        <Parameter name="Node type identifier" isLittleEndian="true" type="byte"/>
+        <Parameter name="Interface version" isLittleEndian="true" type="byte"/>
+        <Parameter name="Firmware version (Major)" isLittleEndian="true" type="byte"/>
+        <Parameter name="Firmware version (Minor)" isLittleEndian="true" type="byte"/>
+        <Parameter name="Number of seconds since processor start-up" isLittleEndian="true" type="uint16" unit="[sec]"/>
+        <Parameter name="Number of milliseconds since processor start-up" isLittleEndian="true" type="uint16" unit="[msec]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_BOOT_PROGRAM_INFO_ST" value="130">
+        <Parameter name="Reset Cause" isLittleEndian="true" type="bitmap">
+          <Bitfield name="Cause of MCU reset" size="4" isNull="false" calibration="1"/>
+          <Bitfield name="Cause of last reboot" size="4" isNull="false" calibration="1"/>
+        </Parameter>
+        <Parameter name="Boot Counter" isLittleEndian="true" type="uint16"/>
+        <Parameter name="Index of current running program" isLittleEndian="true" type="byte"/>
+        <Parameter name="Firmware version (major)" isLittleEndian="true" type="byte"/>
+        <Parameter name="Firmware version (minor)" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Get ADCS unix time" value="140">
+        <Parameter name="unix time" isLittleEndian="true" type="datetime" description="time" rangeStart="864000" rangeEnd="2213136000"/>
+        <Parameter name="mili second" isLittleEndian="true" type="uint16" description="time" rangeStart="0" rangeEnd="1000"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_SRAM_LATCHUP_COUNTERS_ST" value="142">
+        <Parameter name="SRAM1 Latchups Counter" isLittleEndian="true" type="uint16"/>
+        <Parameter name="SRAM2 Latchups Counter" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_EDAC_COUNTERS_ST" value="143">
+        <Parameter name="Number of single SRAM upsets detected" isLittleEndian="true" type="uint16"/>
+        <Parameter name="Number of double SRAM upsets detcted" isLittleEndian="true" type="uint16"/>
+        <Parameter name="Number of mutiple SRAM upsets detected" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_COMM_STATUS_ST" value="144">
+        <Parameter name="No. of telecommands received" isLittleEndian="true" type="uint16"/>
+        <Parameter name="No. of telemetry requests received" isLittleEndian="true" type="uint16"/>
+        <Parameter name="Communication Status Flags" isLittleEndian="true" type="bitmap">
+          <Bitfield name="TC buffer was overrun while receiving a TLC" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="UART protocol error occurred" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="UART start-of-message identifier was received" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Number of data clocked out was more than tlm package" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="I2C Telecommand sent exceeds buffer size" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="CANTelecommand sent exceeds buffer size" size="3" isNull="false" calibration="1"/>
+        </Parameter>
+        <Parameter name="reserved" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_CURRENT_STATE_ST" value="145">
+        <Parameter name="ADCS Operation Modes" isLittleEndian="true" type="bitmap">
+          <Bitfield name="Current attitude estimation mode" size="4" isNull="false" rangeStart="0" rangeEnd="6" calibration="1"/>
+          <Bitfield name="Current attitude control mode" size="4" isNull="false" rangeStart="0" rangeEnd="12" calibration="1"/>
+          <Bitfield name="Current ADCS running mode" size="2" isNull="false" rangeStart="1" rangeEnd="1" calibration="1"/>
+        </Parameter>
+        <Parameter name="ADCS Enabled Components" isLittleEndian="true" type="bitmap">
+          <Bitfield name="CubeControl Signal enable status" size="1" isNull="false" rangeStart="0" rangeEnd="10" calibration="1"/>
+          <Bitfield name="CubeControl Motor enable status" size="1" isNull="false" rangeStart="0" rangeEnd="10" calibration="1"/>
+          <Bitfield name="CubeSense enable status" size="1" isNull="false" rangeStart="0" rangeEnd="10" calibration="1"/>
+          <Bitfield name="CubeWheel 1 enable status" size="1" isNull="false" rangeStart="0" rangeEnd="10" calibration="1"/>
+          <Bitfield name="CubeWheel 2 enable status" size="1" isNull="false" rangeStart="0" rangeEnd="10" calibration="1"/>
+          <Bitfield name="CubeWheel 3 enable status" size="1" isNull="false" rangeStart="0" rangeEnd="10" calibration="1"/>
+          <Bitfield name="CubeStar enable status" size="1" isNull="false" rangeStart="0" rangeEnd="0" calibration="1"/>
+          <Bitfield name="GPS receiver enable status" size="1" isNull="false" rangeStart="0" rangeEnd="0" calibration="1"/>
+          <Bitfield name="GPS antenna LNA enable status" size="1" isNull="false" rangeStart="0" rangeEnd="0" calibration="1"/>
+          <Bitfield name="Motor driver enable status" size="1" isNull="false" rangeStart="0" rangeEnd="10" calibration="1"/>
+          <Bitfield name="Sun is above the local horizon enable status" size="1" isNull="false" rangeStart="0" rangeEnd="1" calibration="1"/>
+        </Parameter>
+        <Parameter name="ADCS Error Occured" isLittleEndian="true" type="bitmap">
+          <Bitfield name="Comm error occurred with the CubeSense" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeControl Signal MCU" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeControl Motor MCU" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeWheel 1" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeWheel 2" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeWheel 3" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeStar" size="1" isNull="false" calibration="1"/>
+        </Parameter>
+        <Parameter name="ADCS Misc Operation Flags" isLittleEndian="true" type="bitmap">
+          <Bitfield name="Magnetometer measured magnetic field with size 100 nT or 100,000 nT" size="1" isNull="false" rangeStart="true" rangeEnd="true" calibration="1"/>
+          <Bitfield name="Cam1 sensor overcurrent detected" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Cam1 sensor was not idle at the start of ADCS loop" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Cam1 sensor was unable to compute angles (could be not in FOV)" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Detected sun angles were outside of +/- 90 deg" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Cam2 sensor overcurrent detected" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Cam2 sensor was not idle at the start of ADCS loop" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Cam2 sensor was unable to compute angles (could be not in FOV)" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Detected nadir angles were outside of +/- 60 deg" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Measured XYZ-body rate is outside of the range +/- 20 deg/s" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Wheel XYZ speed measurement was outside of the range +/- 8500 rpm" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Unable to compute Coarse Sun vector (could be not in FOV)" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Unable to obtain enough matched stars" size="1" isNull="false" rangeStart="false" rangeEnd="true" calibration="1"/>
+          <Bitfield name="Star tracker overcurrent detected" size="1" isNull="false" rangeStart="false" rangeEnd="true" calibration="1"/>
+          <Bitfield name="Orbit Parameters are not in allowed bounds" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Magnetorquer configuration or CSS in invalid." size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Attempt was made to select control mode without appropriate estimator" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Attempt was made to change to an estimation mode that would be inappropriate for the current ctrl mode" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Modelled and measured magnetic field differs in size by mode than 5000 nT" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+          <Bitfield name="Failed to Recover an ADCS Node by successive resets" size="1" isNull="false" rangeStart="false" rangeEnd="false" calibration="1"/>
+        </Parameter>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_EST_ANG_ST" value="146">
+        <Parameter name="Estimated Roll angle" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg" unit="[deg]" rangeStart="-2" rangeEnd="2"/>
+        <Parameter name="Estimated Pitch angle" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg" unit="[deg]" rangeStart="-2" rangeEnd="2"/>
+        <Parameter name="Estimated Yaw angle" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg" unit="[deg]" rangeStart="-2" rangeEnd="2"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_EST_ANG_RATE_ST" value="147">
+        <Parameter name="Estimated x Ang Rate" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg/s" unit="[deg/sec]" rangeStart="-3500" rangeEnd="3500"/>
+        <Parameter name="Estimated Y Ang Rate" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg/s" unit="[deg/sec]" rangeStart="-3500" rangeEnd="3500"/>
+        <Parameter name="Estimated Z Ang Rate" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg/s" unit="[deg/sec]" rangeStart="-3500" rangeEnd="3500"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_SATELLITE_POSITION_ST" value="150">
+        <Parameter name="Latitude" isLittleEndian="true" type="int16" description="LLH Position Received value*0.01 = real value in deg" unit="[deg]"/>
+        <Parameter name="Longitude" isLittleEndian="true" type="int16" description="LLH Position Received value*0.01 = real value in deg" unit="[deg]"/>
+        <Parameter name="Altitude" isLittleEndian="true" type="int16" description="LLH Position Received value*0.01 = real value in km" unit="[km]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_MAGNETIC_FIELD_VEC_ST" value="151">
+        <Parameter name="Magnetic Field X" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in uT" unit="[uT]" rangeStart="-32768‬" rangeEnd="32768‬"/>
+        <Parameter name="Magnetic Field Y" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in uT" unit="[uT]"/>
+        <Parameter name="Magnetic Field Z" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in uT" unit="[uT]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_COARSE_SUN_VEC_ST" value="152">
+        <Parameter name="Coarse Sun X" isLittleEndian="true" type="int16" description="Received value/10000 = real value"/>
+        <Parameter name="Coarse Sun Y" isLittleEndian="true" type="int16" description="Received value/10000 = real value"/>
+        <Parameter name="Coarse Sun Z" isLittleEndian="true" type="int16" description="Received value/10000 = real value"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_FINE_SUN_VEC_ST" value="153">
+        <Parameter name="Fine Sun X" isLittleEndian="true" type="int16" description="Received value/10000 = real value"/>
+        <Parameter name="Fine Sun Y" isLittleEndian="true" type="int16" description="Received value/10000 = real value"/>
+        <Parameter name="Fine Sun Z" isLittleEndian="true" type="int16" description="Received value/10000 = real value"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_NADIR_VECTOR_ST" value="154">
+        <Parameter name="Nadir X" isLittleEndian="true" type="int16"/>
+        <Parameter name="Nadir Y" isLittleEndian="true" type="int16"/>
+        <Parameter name="Nadir Z" isLittleEndian="true" type="int16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_SENSOR_RATES_ST" value="155">
+        <Parameter name="X Angular Rate" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg/s" unit="[deg/s]" rangeStart="-3500" rangeEnd="3500"/>
+        <Parameter name="Y Angular Rate" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg/s" unit="[deg/s]" rangeStart="-3500" rangeEnd="3500"/>
+        <Parameter name="Z Angular Rate" isLittleEndian="true" type="int16" description="Received value*0.01 = real value in deg/s" unit="[deg/s]" rangeStart="-3500" rangeEnd="3500"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_WHEEL_SPEED_ST" value="156">
+        <Parameter name="X Wheel Speed" isLittleEndian="true" type="int16" unit="[rpm]" rangeStart="0" rangeEnd="0"/>
+        <Parameter name="Y Wheel Speed" isLittleEndian="true" type="int16" unit="[rpm]" rangeStart="0" rangeEnd="8000"/>
+        <Parameter name="Z Wheel Speed" isLittleEndian="true" type="int16" unit="[rpm]" rangeStart="0" rangeEnd="0"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_MAGNETORQUER_CMD_ST" value="157">
+        <Parameter name="magcmd_x" isLittleEndian="true" type="int16" unit="[msec]"/>
+        <Parameter name="magcmd_y" isLittleEndian="true" type="int16" unit="[msec]"/>
+        <Parameter name="magcmd_z" isLittleEndian="true" type="int16" unit="[msec]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_WHEEL_SPEED_CMD_ST" value="158">
+        <Parameter name="X Magnetorquer Command" isLittleEndian="true" type="int16" unit="[rpm]"/>
+        <Parameter name="Y Magnetorquer Command" isLittleEndian="true" type="int16" unit="[rpm]"/>
+        <Parameter name="Z Magnetorquer Command" isLittleEndian="true" type="int16" unit="[rpm]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_CSS_1_6_MEASURMENTS_ST" value="168">
+        <Parameter name="css1" isLittleEndian="true" type="byte"/>
+        <Parameter name="css2" isLittleEndian="true" type="byte"/>
+        <Parameter name="css3" isLittleEndian="true" type="byte"/>
+        <Parameter name="css4" isLittleEndian="true" type="byte"/>
+        <Parameter name="css5" isLittleEndian="true" type="byte"/>
+        <Parameter name="css6" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_CSS_7_10_MEASURMENTS_ST" value="169">
+        <Parameter name="css7" isLittleEndian="true" type="byte"/>
+        <Parameter name="css8" isLittleEndian="true" type="byte"/>
+        <Parameter name="css9" isLittleEndian="true" type="byte"/>
+        <Parameter name="css10" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_MAGNETOMETER_MEAS_ST" value="170">
+        <Parameter name="magnetic_x" isLittleEndian="true" type="byte"/>
+        <Parameter name="magnetic_y" isLittleEndian="true" type="byte"/>
+        <Parameter name="magnetic_z" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_C_SENSE_CURRENT_MEASUREMENTS_ST" value="171">
+        <Parameter name="CubeSense 3V3 Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+        <Parameter name="CubeSense Cam2 SRAM Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+        <Parameter name="CubeSense Cam1 SRAM Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_C_CONTROL_CURRENT_MEASUREMENTS_ST" value="172">
+        <Parameter name="CubeControl 3V3 Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+        <Parameter name="CubeControl 5V Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+        <Parameter name="CubeControl Vbat Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_WHEEL_CURRENTS_TLM_ST" value="173">
+        <Parameter name="Wheel 1 Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+        <Parameter name="Wheel 2 Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+        <Parameter name="Wheel 3 Current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ADCS_TEMPERATURE_TLM_ST" value="174">
+        <Parameter name="MCU Temperature" isLittleEndian="true" type="int16" unit="[C]"/>
+        <Parameter name="Magnetometer Temperature" isLittleEndian="true" type="int16" unit="[C]"/>
+        <Parameter name="Redundant Magnetometer Temperature" isLittleEndian="true" type="int16" unit="[C]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RATE_SENSOR_TEMP_TLM_ST" value="175">
+        <Parameter name="X-Rate Sensor Temperature" isLittleEndian="true" type="int16" unit="[C]"/>
+        <Parameter name="Y-Rate Sensor Temperature" isLittleEndian="true" type="int16" unit="[C]"/>
+        <Parameter name="Z-Rate Sensor Temperature" isLittleEndian="true" type="int16" unit="[C]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_STATUS_ST" value="176">
+        <Parameter name="GPS solutions status" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Number of tracked GPS satellites" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Number of GPS satellites used in solution" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Counter for XYZ Lof from GPS" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Counter for RANGE log from GPS" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Response message for GPS log setup" isLittleEndian="true" type="byte" calibration="1"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_TIME_ST" value="177">
+        <Parameter name="GPS reference week" isLittleEndian="true" type="uint16"/>
+        <Parameter name="GPS time milliseconds" isLittleEndian="true" type="uint32" unit="[ms]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_X_ST" value="178">
+        <Parameter name="ECEF Position x" isLittleEndian="true" type="int32" unit="[m]"/>
+        <Parameter name="ECEF Velocity x" isLittleEndian="true" type="int16" unit="[m/s]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_Y_ST" value="179">
+        <Parameter name="ECEF Position y" isLittleEndian="true" type="int32" unit="[m]"/>
+        <Parameter name="ECEF Velocity y" isLittleEndian="true" type="int16" unit="[m/s]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_Z_ST" value="180">
+        <Parameter name="ECEF Position z" isLittleEndian="true" type="int32" unit="[m]"/>
+        <Parameter name="ECEF Velocity z" isLittleEndian="true" type="int16" unit="[m/s]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_STATE_TLM_ST" value="190">
+        <Parameter name="Current State" isLittleEndian="true" type="bitmap">
+          <Bitfield name="Current attitude estimation mode" size="4" isNull="false" calibration="1"/>
+          <Bitfield name="Current attitude control mode" size="4" isNull="false" calibration="1"/>
+          <Bitfield name="Current ADCS running mode" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="CubeControl Signal enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="CubeControl Motor enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="CubeSense enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="CubeWheel 1 enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="CubeWheel 2 enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="CubeWheel 3 enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="CubeStar enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="GPS receiver enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="GPS antenna LNA enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Motor driver enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Sun is above the local horizon enable status" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeSense" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeControl Signal MCU" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeControl Motor MCU" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeWheel 1" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeWheel 2" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeWheel 3" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comm error occurred with the CubeStar" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Magnetometer measured magnetic field with size  100 nT or  100,000 nT" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Cam1 sensor overcurrent detected" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Cam1 sensor was not idle at the start of ADCS loop" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Cam1 sensor was unable to compute angles (could be not in FOV)" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Detected sun angles were outside of +/- 90 deg" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Cam2 sensor overcurrent detected" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Cam2 sensor was not idle at the start of ADCS loop" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Cam2 sensor was unable to compute angles (could be not in FOV)" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Detected nadir angles were outside of +/- 60 deg" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Measured XYZ-body rate is outside of the range +/- 20 deg/s" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Wheel XYZ speed measurement was outside of the range +/- 8500 rpm" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Unable to compute Coarse Sun vector (could be not in FOV)" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Unable to obtain enough matched stars" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Star tracker overcurrent detected" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Orbit Parameters are not in allowed bounds" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Magnetorquer configuration or CSS in invalid." size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Attempt was made to select control mode without appropriate estimator" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Attempt was made to change to an estimation mode that would be inappropriate for the current ctrl mode" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Modelled and measured magnetic field differs in size by mode than 5000 nT" size="1" isNull="false" calibration="1"/>
+        </Parameter>
+        <Parameter name="Failed to Recover an ADCS Node by successive resets" isLittleEndian="true" type="int16" calibration="1"/>
+        <Parameter name="Roll angle" isLittleEndian="true" type="int16" unit="[deg]" calibration="1"/>
+        <Parameter name="Pitch angle" isLittleEndian="true" type="int16" unit="[deg]" calibration="4"/>
+        <Parameter name="Yaw angle" isLittleEndian="true" type="int16" unit="[deg]" calibration="4"/>
+        <Parameter name="quaternion error q1 component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="quaternion error q2 component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="quaternion error q3 component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="X Angular Rate" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="4"/>
+        <Parameter name="Y Angular Rate" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="4"/>
+        <Parameter name="Z Angular Rate" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="4"/>
+        <Parameter name="ECI referenced x-pos vector" isLittleEndian="true" type="int16" unit="[km]" calibration="99"/>
+        <Parameter name="ECI referenced y-pos vector" isLittleEndian="true" type="int16" unit="[km]" calibration="99"/>
+        <Parameter name="ECI referenced z-pos vector" isLittleEndian="true" type="int16" unit="[km]" calibration="99"/>
+        <Parameter name="ECI referenced x-velocity" isLittleEndian="true" type="int16" unit="[m/sec]" calibration="99"/>
+        <Parameter name="ECI referenced y-velocity" isLittleEndian="true" type="int16" unit="[m/sec]" calibration="99"/>
+        <Parameter name="ECI referenced z-velocity" isLittleEndian="true" type="int16" unit="[m/sec]" calibration="99"/>
+        <Parameter name="Latitude angle" isLittleEndian="true" type="int16" unit="[deg]" calibration="4"/>
+        <Parameter name="Longitude angle" isLittleEndian="true" type="int16" unit="[deg]" calibration="4"/>
+        <Parameter name="Altitude angle" isLittleEndian="true" type="int16" unit="[deg]" calibration="4"/>
+        <Parameter name="ECEF x position" isLittleEndian="true" type="int16" unit="[m]" calibration="1"/>
+        <Parameter name="ECEF y position" isLittleEndian="true" type="int16" unit="[m]" calibration="1"/>
+        <Parameter name="ECEF z position" isLittleEndian="true" type="int16" unit="[m]" calibration="1"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ADCS_MEASUREMENTS_ST" value="191">
+        <Parameter name="magfield_x" isLittleEndian="true" type="int16" unit="[uT]" calibration="4"/>
+        <Parameter name="magfield_y" isLittleEndian="true" type="int16" unit="[uT]" calibration="4"/>
+        <Parameter name="magfield_z" isLittleEndian="true" type="int16" unit="[uT]" calibration="4"/>
+        <Parameter name="sun vector x" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="sun vector y" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="sun vector z" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="fine sun vector x" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="fine sun vector y" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="fine sun vector z" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="x-nadir vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="y-nadir vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="z-nadir vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="x angular rate" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="4"/>
+        <Parameter name="y angular rate" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="4"/>
+        <Parameter name="z angular rate" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="4"/>
+        <Parameter name="speed_x" isLittleEndian="true" type="int16" unit="[rpm]"/>
+        <Parameter name="speed_y" isLittleEndian="true" type="int16" unit="[rpm]"/>
+        <Parameter name="speed_z" isLittleEndian="true" type="int16" unit="[rpm]"/>
+        <Parameter name="Star 1 body X-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 1 body Y-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 1 body Z-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 1 orbit X-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 1 orbit Y-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 1 orbit Z-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 2 body X-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 2 body Y-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 2 body Z-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 2 orbit X-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 2 orbit Y-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 2 orbit Z-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 3 body X-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 3 body Y-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 3 body Z-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 3 orbit X-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 3 orbit Y-vector" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="Star 3 orbit Z-vector" isLittleEndian="true" type="int16" calibration="11"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ACTUATORS_CMDS_ST" value="192">
+        <Parameter name="commanded X-magnetorquer" isLittleEndian="true" type="int16" unit="[ms]" calibration="12"/>
+        <Parameter name="commanded Y-magnetorquer" isLittleEndian="true" type="int16" unit="[ms]" calibration="12"/>
+        <Parameter name="commanded Z-magnetorquer" isLittleEndian="true" type="int16" unit="[ms]" calibration="12"/>
+        <Parameter name="Commanded Wheel Speed X" isLittleEndian="true" type="int16" unit="[RPM]" calibration="11"/>
+        <Parameter name="Commanded Wheel Speed Y" isLittleEndian="true" type="int16" unit="[RPM]" calibration="11"/>
+        <Parameter name="Commanded Wheel Speed Z" isLittleEndian="true" type="int16" unit="[RPM]" calibration="11"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ESTIMATION_METADATA_ST" value="193">
+        <Parameter name="IGRF magnetic field X component" isLittleEndian="true" type="int16" unit="[uT]" calibration="4"/>
+        <Parameter name="IGRF magnetic field Y component" isLittleEndian="true" type="int16" unit="[uT]" calibration="4"/>
+        <Parameter name="IGRF magnetic field Z component" isLittleEndian="true" type="int16" unit="[uT]" calibration="4"/>
+        <Parameter name="sun modeled X component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="sun modeled Y component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="sun modeled Z component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="estimated rate sensor bias X component" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="1"/>
+        <Parameter name="estimated rate sensor bias Y component" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="1"/>
+        <Parameter name="estimated rate sensor bias Z component" isLittleEndian="true" type="int16" unit="[deg/sec]" calibration="1"/>
+        <Parameter name="estimation innovation X component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="estimation innovation Y component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="estimation innovation Z component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="quaternion error q1 component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="quaternion error q2 component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="quaternion error q3 component" isLittleEndian="true" type="int16" calibration="11"/>
+        <Parameter name="quaternion covariance q1 component" isLittleEndian="true" type="int16" calibration="98"/>
+        <Parameter name="quaternion covariance q2 component" isLittleEndian="true" type="int16" calibration="98"/>
+        <Parameter name="quaternion covariance q3 component" isLittleEndian="true" type="int16" calibration="98"/>
+        <Parameter name="X angular rate covariance" isLittleEndian="true" type="int16" unit="[m]" calibration="98"/>
+        <Parameter name="Y angular rate covariance" isLittleEndian="true" type="int16" unit="[m]" calibration="98"/>
+        <Parameter name="Z angular rate covariance" isLittleEndian="true" type="int16" unit="[m]" calibration="98"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_SENSOR_MEASUREMENTS_ST" value="194">
+        <Parameter name="Cam 2 azimuth angle" isLittleEndian="true" type="int16"/>
+        <Parameter name="Cam 2 elevation angle" isLittleEndian="true" type="int16"/>
+        <Parameter name="Cam 2 capture status" isLittleEndian="true" type="byte"/>
+        <Parameter name="Cam 2 detection result" isLittleEndian="true" type="byte"/>
+        <Parameter name="Cam 1 azimuth angle" isLittleEndian="true" type="int16"/>
+        <Parameter name="Cam 1 elevation angle" isLittleEndian="true" type="int16"/>
+        <Parameter name="Cam 1 capture status" isLittleEndian="true" type="byte"/>
+        <Parameter name="Cam 1 detection result" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 1 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 2 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 3 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 4 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 5 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 6 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 7 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 8 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 9 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="CSS 10 Sampled A/D value" isLittleEndian="true" type="byte"/>
+        <Parameter name="RAW Magnetometer X Sampled A/D value" isLittleEndian="true" type="int16"/>
+        <Parameter name="RAW Magnetometer Y Sampled A/D value" isLittleEndian="true" type="int16"/>
+        <Parameter name="RAW Magnetometer Z Sampled A/D value" isLittleEndian="true" type="int16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_POW_TEMP_MEAS_TLM_ST" value="195">
+        <Parameter name="CubeSense 3V3 current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="13"/>
+        <Parameter name="CubeSense Nadir SRAM current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="13"/>
+        <Parameter name="CubeSense Sun SRAM current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="13"/>
+        <Parameter name="CubeControl 3V3 current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="14"/>
+        <Parameter name="CubeControl 5V current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="14"/>
+        <Parameter name="CubeControl Vbat current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="14"/>
+        <Parameter name="Wheel 1 Current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="4"/>
+        <Parameter name="Wheel 2 Current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="4"/>
+        <Parameter name="Wheel 3 Current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="4"/>
+        <Parameter name="CubeStar current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="4"/>
+        <Parameter name="Magnetorquer current" isLittleEndian="true" type="uint16" unit="[mA]" calibration="4"/>
+        <Parameter name="MCU Temperature" isLittleEndian="true" type="uint16" unit="[C]" calibration="1"/>
+        <Parameter name="Magnetometer Temperature" isLittleEndian="true" type="uint16" unit="[C]" calibration="4"/>
+        <Parameter name="Redundant Magnetometer Temperature" isLittleEndian="true" type="uint16" unit="[C]" calibration="1"/>
+        <Parameter name="X-rate sensor temp vector" isLittleEndian="true" type="uint16" unit="[C]" calibration="1"/>
+        <Parameter name="Y-rate sensor temp vector" isLittleEndian="true" type="uint16" unit="[C]" calibration="1"/>
+        <Parameter name="Z-rate sensor temp vector" isLittleEndian="true" type="uint16" unit="[C]" calibration="1"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ADCS_EXC_TIMES_ST" value="196">
+        <Parameter name="Time to perform complete" isLittleEndian="true" type="int16" unit="[ms]"/>
+        <Parameter name="Time to perform Sensor/actuator comm" isLittleEndian="true" type="int16" unit="[ms]"/>
+        <Parameter name="Time to execute SGP4 propagator" isLittleEndian="true" type="int16" unit="[ms]"/>
+        <Parameter name="Time to execute IGRF computation" isLittleEndian="true" type="int16" unit="[ms]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_PWR_CTRL_DEVICE_ST" value="197">
+        <Parameter name="Power Flags" isLittleEndian="true" type="bitmap">
+          <Bitfield name="Power CubeControl Signal" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="Power CubeControl Motor" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="Power CubeSense" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="Power CubeStar" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="Power CubeWheel 1" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="Power CubeWheel 2" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="Power CubeWheel 3" size="2" isNull="false" calibration="1"/>
+          <Bitfield name="Power Motor" size="2" isNull="false" calibration="1"/>
+        </Parameter>
+        <Parameter name="Power GPS LNA" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_MISC_CURRENT_MEAS_ST" value="198">
+        <Parameter name="CubeStar current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+        <Parameter name="Magnetorquer current" isLittleEndian="true" type="uint16" unit="[mA]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_COMMANDED_ANDEDATTITUDE_ANGLES_ST" value="199">
+        <Parameter name="Commanded roll angle" isLittleEndian="true" type="int16" unit="[deg]"/>
+        <Parameter name="Commanded pitch angle" isLittleEndian="true" type="int16" unit="[deg]"/>
+        <Parameter name="Commanded yaw angle" isLittleEndian="true" type="int16" unit="[deg]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_FULL_CONFIG_ST" value="206">
+        <Parameter name="ADCS Configuration" isLittleEndian="true" type="string" size="150"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_SGP4_ORBIT_PARAMETERS_ST" value="207">
+        <Parameter name="Inclination" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="Eccentricity" isLittleEndian="true" type="double" unit="[orb/day]"/>
+        <Parameter name="RAAN" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="Argument of perigee" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="B-star drag" isLittleEndian="true" type="double"/>
+        <Parameter name="Mean motion" isLittleEndian="true" type="double"/>
+        <Parameter name="Mean anomaly" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="Epoch" isLittleEndian="true" type="double" unit="[year.day]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ADCS_RAW_GPS_MEAS_ST" value="210">
+        <Parameter name="GPS solutions status" isLittleEndian="true" type="byte"/>
+        <Parameter name="Number of tracked GPS satellites" isLittleEndian="true" type="byte"/>
+        <Parameter name="Number of GPS satellites used in solution" isLittleEndian="true" type="byte"/>
+        <Parameter name="Counter for XYZ Lof from GPS" isLittleEndian="true" type="byte"/>
+        <Parameter name="Counter for RANGE log from GPS" isLittleEndian="true" type="byte"/>
+        <Parameter name="Response message for GPS log setup" isLittleEndian="true" type="byte"/>
+        <Parameter name="GPS reference week" isLittleEndian="true" type="uint16"/>
+        <Parameter name="GPS time milliseconds" isLittleEndian="true" type="uint32" unit="[ms]"/>
+        <Parameter name="ECEF Position X" isLittleEndian="true" type="int32" unit="[m]"/>
+        <Parameter name="ECEF Velocity X" isLittleEndian="true" type="int16" unit="[m/sec]"/>
+        <Parameter name="ECEF Position Y" isLittleEndian="true" type="int32" unit="[m]"/>
+        <Parameter name="ECEF Velocity Y" isLittleEndian="true" type="int16" unit="[m/sec]"/>
+        <Parameter name="ECEF Position Z" isLittleEndian="true" type="int32" unit="[m]"/>
+        <Parameter name="ECEF Velocity Z" isLittleEndian="true" type="int16" unit="[m/sec]"/>
+        <Parameter name="X position standard deviation" isLittleEndian="true" type="int16" unit="[m]" calibration="4"/>
+        <Parameter name="Y position standard deviation" isLittleEndian="true" type="int16" unit="[m]" calibration="4"/>
+        <Parameter name="Z position standard deviation" isLittleEndian="true" type="int16" unit="[m]" calibration="4"/>
+        <Parameter name="X velocity standard deviation" isLittleEndian="true" type="int16" unit="[m/sec]"/>
+        <Parameter name="Y velocity standard deviation" isLittleEndian="true" type="int16" unit="[m/sec]"/>
+        <Parameter name="Z velocity standard deviation" isLittleEndian="true" type="int16" unit="[m/sec]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_STAR_TRACKER_TLM_ST" value="211">
+        <Parameter name="Star Numbers" isLittleEndian="false" type="bitmap">
+          <Bitfield name="Number of stars detected" size="4" isNull="false" calibration="1"/>
+          <Bitfield name="Number of stars identified" size="4" isNull="false" calibration="1"/>
+        </Parameter>
+        <Parameter name="Noise level of star image" isLittleEndian="false" type="byte" calibration="1"/>
+        <Parameter name="fields" isLittleEndian="false" type="bitmap">
+          <Bitfield name="Attitude success" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Image capture success" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Detection success" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Identification success" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Loop time error" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Max stars detected" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Less than three stars detected in FoV" size="1" isNull="false" calibration="1"/>
+          <Bitfield name="Comms error" size="1" isNull="false" calibration="1"/>
+        </Parameter>
+        <Parameter name="Confidence factor of star 1" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Confidence factor of star 2" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Confidence factor of star 3" isLittleEndian="true" type="byte" calibration="1"/>
+        <Parameter name="Instrument magnitude of star 1" isLittleEndian="true" type="uint16" calibration="1"/>
+        <Parameter name="Instrument magnitude of star 2" isLittleEndian="true" type="uint16" calibration="1"/>
+        <Parameter name="Instrument magnitude of star 3" isLittleEndian="true" type="uint16" calibration="1"/>
+        <Parameter name="Catalog number of star 1" isLittleEndian="true" type="uint16" calibration="1"/>
+        <Parameter name="X centroid of star 1" isLittleEndian="true" type="int16" calibration="1"/>
+        <Parameter name="Y centroid of star 1" isLittleEndian="true" type="int16" calibration="1"/>
+        <Parameter name="Catalog number of star 2" isLittleEndian="true" type="uint16" calibration="1"/>
+        <Parameter name="X centroid of star 2" isLittleEndian="true" type="int16" calibration="1"/>
+        <Parameter name="Y centroid of star 2" isLittleEndian="true" type="int16" calibration="1"/>
+        <Parameter name="Catalog number of star 3" isLittleEndian="true" type="uint16" calibration="1"/>
+        <Parameter name="X centroid of star 3" isLittleEndian="true" type="int16" calibration="1"/>
+        <Parameter name="Y centroid of star 3" isLittleEndian="true" type="int16" calibration="1"/>
+        <Parameter name="Capture time [ms]" isLittleEndian="true" type="uint16" unit="[ms]" calibration="1"/>
+        <Parameter name="Detection time [ms]" isLittleEndian="true" type="uint16" unit="[ms]" calibration="1"/>
+        <Parameter name="Identifcation time [ms]" isLittleEndian="true" type="uint16" unit="[ms]" calibration="1"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ADC_RAW_RED_MAG_ST" value="215">
+        <Parameter name="Redundant Mag X" isLittleEndian="true" type="int16"/>
+        <Parameter name="Redundant Mag Y" isLittleEndian="true" type="int16"/>
+        <Parameter name="Redundant Mag Z" isLittleEndian="true" type="int16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ACP_EXECUTION_STATE_ST" value="220">
+        <Parameter name="time since the start of the current loop iteration" isLittleEndian="true" type="uint16" unit="[ms]"/>
+        <Parameter name="Indicates which part of the loop is currently executing" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_TLM_SAVE_VECTOR_ST" value="246">
+        <Parameter name="TLM 1 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 2 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 3 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 4 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 5 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 6 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 7 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 8 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 9 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 10 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 11 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 12 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 13 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 14 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 15 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 16 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 17 Save Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 18 Save Flag" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_PERIOD_VECTOR_ST" value="247">
+        <Parameter name="TLM 1 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 2 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 3 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 4 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 5 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 6 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 7 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 8 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 9 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 10 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 11 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 12 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 13 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 14 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 15 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 16 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 17 Save Period" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 18 Save Period" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_LAST_SAVE_TIMES_ST" value="248">
+        <Parameter name="TLM 1 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 2 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 3 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 4 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 5 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 6 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 7 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 8 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 9 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 10 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 11 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 12 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 13 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 14 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 15 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 16 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 17 Last save time" isLittleEndian="true" type="datetime"/>
+        <Parameter name="TLM 18 Last save time" isLittleEndian="true" type="datetime"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_OPERATING_FLAGS_ST" value="249">
+        <Parameter name="TLM 1 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 2 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 3 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 4 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 5 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 6 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 7 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 8 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 9 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 10 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 11 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 12 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 13 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 14 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 15 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 16 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 17 Operating Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM 18 Operating Flag" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_TLM_ELEM_AT_INDEX_ST" value="250">
+        <Parameter name="Save This TLM Flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="Telemetry Size" isLittleEndian="true" type="byte"/>
+        <Parameter name="TLM Collection Function Address" isLittleEndian="true" type="uint32"/>
+        <Parameter name="TLM Filename" isLittleEndian="true" type="string" size="8"/>
+        <Parameter name="Telemetery Save Period" isLittleEndian="true" type="byte" unit="[sec]"/>
+        <Parameter name="Last Telemetry Save Time" isLittleEndian="true" type="uint32" unit="[sec]"/>
+        <Parameter name="Telemtry Save Process is Corrupted" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ADCS_CONFIG_PARAM_ST" value="251">
+        <Parameter name="Parameter Data" isLittleEndian="true" type="string" size="64"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_TLM_OVERRIDE_FLAG_ST" value="252">
+        <Parameter name="Override Flag" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_ACK_DATA_ST" value="254">
+        <Parameter name="Command Subtype" isLittleEndian="true" type="uint32"/>
+        <Parameter name="Command Return Value" isLittleEndian="true" type="int32"/>
+        <Parameter name="I2C ACK Value" isLittleEndian="true" type="int32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_DATA_LOG_ST" value="255"/>
+    </ServiceType>
+  </Telemetry>
+  <Telecommands>
+    <ServiceType name="EPS" value="6">
+      <ServiceSubtype name="change heater temp" value="0">
+        <Parameter name="heater low temp" isLittleEndian="false" type="byte" description="heater low temp" unit="C"/>
+        <Parameter name="heater high temp" isLittleEndian="false" type="byte" description="heater high temp" unit="C"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="update alpha parameter" value="11">
+        <Parameter name="alpha" isLittleEndian="false" type="float"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="update COMM voltages" value="20">
+        <Parameter name="aprs shut volt" isLittleEndian="false" type="uint16" description="heater low temp" unit="mV"/>
+        <Parameter name="beacon high delay volt" isLittleEndian="false" type="uint16" description="heater high temp"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="allow ADCS" value="99"/>
+      <ServiceSubtype name="shut forever ADCS" value="100"/>
+      <ServiceSubtype name="allow camera" value="101"/>
+      <ServiceSubtype name="shut forever camera" value="102"/>
+      <ServiceSubtype name="update logic voltages" value="255">
+        <Parameter name="Critical decreasing" isLittleEndian="false" type="uint16" description="volt[0]" unit="mV"/>
+        <Parameter name="Safe decreasing" isLittleEndian="false" type="uint16" description="volt[1]" unit="mV"/>
+        <Parameter name="Cruise decreasing" isLittleEndian="false" type="uint16" description="volt[2]" unit="mV"/>
+        <Parameter name="Full increasing" isLittleEndian="false" type="uint16" description="volt[3]" unit="mV"/>
+        <Parameter name="Cruise increasing" isLittleEndian="false" type="uint16" description="volt[4]" unit="mV"/>
+        <Parameter name="Safe increasing" isLittleEndian="false" type="uint16" description="volt[5]" unit="mV"/>
+        <Parameter name="beacon high delay volt" isLittleEndian="false" type="uint16" description="beacon high dela volt"/>
+        <Parameter name="aprs shut volt" isLittleEndian="false" type="uint16" description="aprs shutting volt" unit="mV"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="Comm" value="13">
+      <ServiceSubtype name="mute satellite" value="0">
+        <Parameter name="duration" isLittleEndian="false" type="uint16" description="the mute duration" unit="min"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="unmute satellite" value="1"/>
+      <ServiceSubtype name="change beacon transmitting time" value="5">
+        <Parameter name="regular_time_freq" isLittleEndian="false" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="activate transponder (control GS)" value="24">
+        <Parameter name="duration" isLittleEndian="false" type="byte" unit="min"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="shut transponder" value="25"/>
+      <ServiceSubtype name="change transponder RSSI" value="26">
+        <Parameter name="the minimal RSSI" isLittleEndian="false" type="uint16" description="new value"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="change default bit rate" value="55">
+        <Parameter name="new bit rate" isLittleEndian="false" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="stop dump" value="91"/>
+    </ServiceType>
+    <ServiceType name="General" value="20">
+      <ServiceSubtype name="generic I2C" value="0">
+        <Parameter name="I2C address" isLittleEndian="false" type="byte" description="I2C address"/>
+        <Parameter name="command length" isLittleEndian="false" type="byte" description="command length"/>
+        <Parameter name="command data" isLittleEndian="true" type="string" description="command parameter" size="40"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="upload time" value="17">
+        <Parameter name="unix time" isLittleEndian="false" type="datetime" description="time" unit="sec"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="dump" value="33">
+        <Parameter name="send type" isLittleEndian="false" type="byte"/>
+        <Parameter name="file type [0]" isLittleEndian="false" type="byte" description="the first file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [1]" isLittleEndian="false" type="byte" description="the second file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [2]" isLittleEndian="false" type="byte" description="the third file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [3]" isLittleEndian="false" type="byte" description="the forth file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [4]" isLittleEndian="false" type="byte" description="the fifth file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [5]" isLittleEndian="false" type="byte" description="the sixth file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [6]" isLittleEndian="false" type="byte" description="the seventh file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="resolution" isLittleEndian="false" type="byte" unit="sec"/>
+        <Parameter name="unix start time" isLittleEndian="false" type="datetime" description="start time" unit="seconds"/>
+        <Parameter name="unix end time" isLittleEndian="false" type="datetime" description="end time" unit="seconds"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="delete packets" value="35">
+        <Parameter name="file type [0]" isLittleEndian="false" type="byte" description="the first file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [1]" isLittleEndian="false" type="byte" description="the second file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [2]" isLittleEndian="false" type="byte" description="the third file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [3]" isLittleEndian="false" type="byte" description="the forth file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [4]" isLittleEndian="false" type="byte" description="the fifth file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="unix start time" isLittleEndian="false" type="datetime" description="start time" unit="seconds"/>
+        <Parameter name="unix end time" isLittleEndian="false" type="datetime" description="end time" unit="seconds"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="format sd" value="36">
+        <Parameter name="sd" isLittleEndian="false" type="byte" rangeStart="0" rangeEnd="1"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="reset files" value="45">
+        <Parameter name="file type [0]" isLittleEndian="false" type="byte" description="the first file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [1]" isLittleEndian="false" type="byte" description="the second file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [2]" isLittleEndian="false" type="byte" description="the third file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [3]" isLittleEndian="false" type="byte" description="the forth file type" rangeStart="0" rangeEnd="255"/>
+        <Parameter name="file type [4]" isLittleEndian="false" type="byte" description="the fifth file type" rangeStart="0" rangeEnd="255"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="restart file system" value="46"/>
+      <ServiceSubtype name="redeploy antS" value="56"/>
+      <ServiceSubtype name="ARM DISARM" value="57">
+        <Parameter name="arm disarm" isLittleEndian="false" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="hard reset" value="66">
+        <Parameter name="what subsystem" isLittleEndian="false" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="reset satellite" value="67"/>
+      <ServiceSubtype name="soft reset" value="68">
+        <Parameter name=" what subsystem" isLittleEndian="false" type="byte" description="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="graceful reset" value="69"/>
+      <ServiceSubtype name="DummyFunc" value="122"/>
+      <ServiceSubtype name="stop TM" value="200"/>
+      <ServiceSubtype name="resume TM" value="201"/>
+    </ServiceType>
+    <ServiceType name="SW-GST" value="42">
+      <ServiceSubtype name="reset delayed command list" value="32"/>
+      <ServiceSubtype name="reset subSystem FRAM" value="42">
+        <Parameter name="subsystem index" isLittleEndian="false" type="byte" description="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="FRAM write" value="43">
+        <Parameter name="size" isLittleEndian="false" type="byte" description="data size to write"/>
+        <Parameter name="address" isLittleEndian="true" type="uint32" description="FRAM address"/>
+        <Parameter name="data" isLittleEndian="true" type="string" description="data to write to FRAM" size="183"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="FRAM read" value="44">
+        <Parameter name="size" isLittleEndian="false" type="byte" description="data size to read"/>
+        <Parameter name="address" isLittleEndian="true" type="uint32" description="FRAM address"/>
+      </ServiceSubtype>
+    </ServiceType>
+    <ServiceType name="online TM" value="88">
+      <ServiceSubtype name="Get TLM" value="0">
+        <Parameter name="online TM index" isLittleEndian="false" type="byte" description="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="reset off line TLM list" value="1"/>
+      <ServiceSubtype name="Add item to off line TLM list" value="2">
+        <Parameter name="online TM index" isLittleEndian="false" type="byte" description="byte"/>
+        <Parameter name="Period" isLittleEndian="true" type="uint32" description="period" unit="seconds"/>
+        <Parameter name="unix stop saving time" isLittleEndian="true" type="datetime" description="stop time" unit="seconds"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Delete item from off line TLM list" value="3">
+        <Parameter name="online TM index" isLittleEndian="false" type="byte" description="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="get offline list setting" value="4"/>
+    </ServiceType>
+    <ServiceType name="ADCS" value="154">
+      <ServiceSubtype name="ADCS_I2C_GENRIC_ST" value="0">
+        <Parameter name="I2C Command ID" isLittleEndian="true" type="byte"/>
+        <Parameter name="I2c Command data length" isLittleEndian="true" type="uint16"/>
+        <Parameter name="i2c Command ack" isLittleEndian="true" type="byte" description="Should always be zero(0x00)"/>
+        <Parameter name="i2C Command Data" isLittleEndian="true" type="string" size="150"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_COMPONENT_RESET_ST" value="1"/>
+      <ServiceSubtype name="ADCS_SET_CURR_UNIX_TIME_ST" value="2">
+        <Parameter name="unix_time_sec" isLittleEndian="true" type="datetime" unit="[sec]"/>
+        <Parameter name="unix_time_milli_sec" isLittleEndian="true" type="uint16" unit="[milli-sec]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_CACHE_ENABLE_ST" value="3">
+        <Parameter name="cache state" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_RESET_BOOT_REGISTER_ST" value="6"/>
+      <ServiceSubtype name="ADCS_DEPLOY_MAG_BOOM_ST" value="7">
+        <Parameter name="timeout" isLittleEndian="true" type="byte" unit="[sec]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_RUN_MODE_ST" value="10">
+        <Parameter name="runmode" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_PWR_CTRL_DEVICE_ST" value="11">
+        <Parameter name="Power" isLittleEndian="false" type="bitmap" description="Random Booleans">
+          <Bitfield name="CubeControl Signal" size="2" isNull="true" calibration="11"/>
+          <Bitfield name="CubeControl Motor" size="2" isNull="true" calibration="11"/>
+          <Bitfield name="Power CubeSense" size="2" isNull="true" calibration="11"/>
+          <Bitfield name="Power CubeStar" size="2" isNull="true" calibration="11"/>
+        </Parameter>
+        <Parameter name="Power 2" isLittleEndian="false" type="bitmap" description="Random Booleans 2">
+          <Bitfield name="Power CubeWheel 1" size="2" isNull="true" calibration="11"/>
+          <Bitfield name="Power CubeWheel 2" size="2" isNull="true" calibration="11"/>
+          <Bitfield name="Power CubeWheel 3" size="2" isNull="true" calibration="11"/>
+          <Bitfield name="Power Motor" size="2" isNull="true" calibration="11"/>
+        </Parameter>
+        <Parameter name="Power GPS LNA" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_CLEAR_ERRORS_ST" value="12">
+        <Parameter name="ADCS_CLEAR_ERRORS_ST_PARAM" isLittleEndian="false" type="bitmap">
+          <Bitfield name="ADCS Error Flags" size="1" isNull="true" calibration="15"/>
+          <Bitfield name="HK Error Flags" size="1" isNull="true" calibration="19"/>
+          <Bitfield name="not used" size="6" isNull="true" calibration="18"/>
+        </Parameter>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_ATT_CTRL_MODE_ST" value="13">
+        <Parameter name="ctrl mode" isLittleEndian="true" type="byte"/>
+        <Parameter name="override flag" isLittleEndian="true" type="byte"/>
+        <Parameter name="timeout" isLittleEndian="true" type="uint16" unit="[sec]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_EST_MODE_ST" value="14">
+        <Parameter name="estimation mode" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_MAG_OUTPUT_ST" value="16">
+        <Parameter name="magduty_x" isLittleEndian="true" type="int16"/>
+        <Parameter name="magduty_y" isLittleEndian="true" type="int16"/>
+        <Parameter name="magduty_z" isLittleEndian="true" type="int16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_WHEEL_SPEED_ST" value="17">
+        <Parameter name="speed_x" isLittleEndian="true" type="int16" unit="[RPM]"/>
+        <Parameter name="speed_y" isLittleEndian="true" type="int16" unit="[RPM]"/>
+        <Parameter name="speed_z" isLittleEndian="true" type="int16" unit="[RPM]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_MTQ_CONFIG_ST" value="21">
+        <Parameter name="MTQ Config 1" isLittleEndian="true" type="byte"/>
+        <Parameter name="MTQ Config 2" isLittleEndian="true" type="byte"/>
+        <Parameter name="MTQ Config 3" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_RW_CONFIG_ST" value="22">
+        <Parameter name="RW 1 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="RW 2 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="RW 3 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="RW 4 Config" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GYRO_CONFIG_ST" value="23">
+        <Parameter name="Gyro 1 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Gyro 2 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Gyro 3 Config" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_CSS_CONFIG_ST" value="24">
+        <Parameter name="Css 1 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 2 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 3 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 4 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 5 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 6 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 7 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 8 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 9 Config" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 10 Config" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_CSS_RELATIVE_SCALE_ST" value="25">
+        <Parameter name="Css 1 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 2 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 3 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 4 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 5 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 6 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 7 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 8 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 9 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css 10 Relative Scale" isLittleEndian="true" type="byte"/>
+        <Parameter name="Css Threshold" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_MAGNETMTR_MOUNT_ST" value="33">
+        <Parameter name="mounttrans_alpha_ang" isLittleEndian="true" type="int16"/>
+        <Parameter name="mounttrans_beta_ang" isLittleEndian="true" type="int16"/>
+        <Parameter name="mounttrans_gamma_ang" isLittleEndian="true" type="int16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_MAGNETMTR_OFFSET_ST" value="34">
+        <Parameter name="magnetometer channel 1 offset" isLittleEndian="true" type="int16"/>
+        <Parameter name="magnetometer channel 2 offset" isLittleEndian="true" type="int16"/>
+        <Parameter name="magnetometer channel 3 offset" isLittleEndian="true" type="int16"/>
+        <Parameter name="magnetometer sensitivity matrix 11" isLittleEndian="true" type="int16"/>
+        <Parameter name="magnetometer sensitivity matrix 22" isLittleEndian="true" type="int16"/>
+        <Parameter name="magnetometer sensitivity matrix 33" isLittleEndian="true" type="int16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_MAGNETMTR_SENSTVTY_ST" value="35">
+        <Parameter name="mag_sensmatrix_s12" isLittleEndian="true" type="int16"/>
+        <Parameter name="mag_sensmatrix_s13" isLittleEndian="true" type="int16"/>
+        <Parameter name="mag_sensmatrix_s21" isLittleEndian="true" type="int16"/>
+        <Parameter name="mag_sensmatrix_s23" isLittleEndian="true" type="int16"/>
+        <Parameter name="mag_sensmatrix_s31" isLittleEndian="true" type="int16"/>
+        <Parameter name="mag_sensmatrix_s32" isLittleEndian="true" type="int16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_RATE_SENSOR_OFFSET_ST" value="36">
+        <Parameter name="rate sensor offset x" isLittleEndian="true" type="int16"/>
+        <Parameter name="rate sensor offset y" isLittleEndian="true" type="int16"/>
+        <Parameter name="rate sensor offset z" isLittleEndian="true" type="int16"/>
+        <Parameter name="rate sensor multiplier" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_STAR_TRACKER_CONFIG_ST" value="37">
+        <Parameter name="Mounting Transform Alpha Angle" isLittleEndian="true" type="int16"/>
+        <Parameter name="Mounting Transform Beta Angle" isLittleEndian="true" type="int16"/>
+        <Parameter name="Mounting Transform Gamma Angle" isLittleEndian="true" type="int16"/>
+        <Parameter name="Exposure time register value" isLittleEndian="true" type="uint16"/>
+        <Parameter name="Detection Threshold" isLittleEndian="true" type="byte"/>
+        <Parameter name="Star Threshold" isLittleEndian="true" type="byte"/>
+        <Parameter name="Maximum stars that the star tracker will match" isLittleEndian="true" type="byte"/>
+        <Parameter name="Maximum pixels in a star" isLittleEndian="true" type="byte"/>
+        <Parameter name="Maximum noise" isLittleEndian="true" type="byte"/>
+        <Parameter name="Minimum pixels in a star" isLittleEndian="true" type="byte"/>
+        <Parameter name="% Error margin of the star id" isLittleEndian="true" type="byte"/>
+        <Parameter name="Pixel centroid X" isLittleEndian="true" type="float"/>
+        <Parameter name="Pixel centroid Y" isLittleEndian="true" type="float"/>
+        <Parameter name="Star Tracker Focal Length" isLittleEndian="true" type="uint16"/>
+        <Parameter name="Synchronization delay within star Tracker" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_DETUMB_CTRL_PARAM_ST" value="38">
+        <Parameter name="Detumbling Spin Gain" isLittleEndian="true" type="float"/>
+        <Parameter name="Detumbling Damping Gain" isLittleEndian="true" type="float"/>
+        <Parameter name="Reference Spin Rate" isLittleEndian="true" type="int16"/>
+        <Parameter name="Fast B-Dot Detubmling Gain" isLittleEndian="true" type="float"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_YWHEEL_CTRL_PARAM_ST" value="39">
+        <Parameter name="Y-Momentum Control Gain" isLittleEndian="true" type="float"/>
+        <Parameter name="Y-Momentum Control Nutation Damping Gain" isLittleEndian="true" type="float"/>
+        <Parameter name="Y-Momentum Proportional Gain" isLittleEndian="true" type="float"/>
+        <Parameter name="Y-Momentum Derivative Gain" isLittleEndian="true" type="float"/>
+        <Parameter name="Reference Wheel Momentum" isLittleEndian="true" type="float"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_RWHEEL_CTRL_PARAM_ST" value="40">
+        <Parameter name="RWheel Proportional Gain" isLittleEndian="true" type="float"/>
+        <Parameter name="RWheel Derivative Gain" isLittleEndian="true" type="float"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_MOMENT_INTERTIA_ST" value="41">
+        <Parameter name="Moment Of Inertia Ixx" isLittleEndian="true" type="float" unit="[kg*m^2]"/>
+        <Parameter name="Moment Of Inertia Iyy" isLittleEndian="true" type="float" unit="[kg*m^2]"/>
+        <Parameter name="Moment Of Inertia Izz" isLittleEndian="true" type="float" unit="[kg*m^2]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_PROD_INERTIA_ST" value="42">
+        <Parameter name="Moment Of Inertia Ixy" isLittleEndian="true" type="float" unit="[kg*m^2]"/>
+        <Parameter name="Moment Of Inertia Ixz" isLittleEndian="true" type="float" unit="[kg*m^2]"/>
+        <Parameter name="Moment Of Inertia Iyz" isLittleEndian="true" type="float" unit="[kg*m^2]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_ESTIMATION_PARAM1_ST" value="43">
+        <Parameter name="Magnetometer rate filter system noise" isLittleEndian="true" type="float"/>
+        <Parameter name="EKF system noise" isLittleEndian="true" type="float"/>
+        <Parameter name="CSS measurement noise" isLittleEndian="true" type="float"/>
+        <Parameter name="Sun sensor measurement noise" isLittleEndian="true" type="float"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_ESTIMATION_PARAM2_ST" value="44">
+        <Parameter name="Nadir Sensor Measurement Noise" isLittleEndian="true" type="float"/>
+        <Parameter name="Magnetometer Measurement Noise" isLittleEndian="true" type="float"/>
+        <Parameter name="Star Tracker Measurement Noise" isLittleEndian="true" type="float"/>
+        <Parameter name="Sensors Use" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_PARAMS_ST" value="45">
+        <Parameter name="Inclination" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="Eccentricity" isLittleEndian="true" type="double"/>
+        <Parameter name="RAAN" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="Argument of perigee" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="B-star drag" isLittleEndian="true" type="double"/>
+        <Parameter name="Mean motion" isLittleEndian="true" type="double" unit="[orbits/day]"/>
+        <Parameter name="Mean anomaly" isLittleEndian="true" type="double" unit="[deg]"/>
+        <Parameter name="Epoch" isLittleEndian="true" type="double" unit="[year.day]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_INC_ST" value="46">
+        <Parameter name="Inclination" isLittleEndian="true" type="double" unit="[deg]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_ECC_ST" value="47">
+        <Parameter name="Eccentricity" isLittleEndian="true" type="double"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_RAAN_ST" value="48">
+        <Parameter name="RAAN" isLittleEndian="true" type="double" unit="[deg]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_ARG_OF_PER_ST" value="49">
+        <Parameter name="Argument of perigee" isLittleEndian="true" type="double" unit="[deg]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_BSTAR_DRAG_ST" value="50">
+        <Parameter name="B-star drag" isLittleEndian="true" type="double"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_MEAN_MOT_ST" value="51">
+        <Parameter name="Mean motion" isLittleEndian="true" type="double" unit="[orb/day]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_MEAN_ANOM_ST" value="52">
+        <Parameter name="Mean anomaly" isLittleEndian="true" type="double" unit="[deg]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_SGP4_ORBIT_EPOCH_ST" value="53">
+        <Parameter name="Epoch" isLittleEndian="true" type="double" unit="[year.day]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_MAGNETOMETER_MODE_ST" value="56">
+        <Parameter name="Magnetometer Mode" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SAVE_CONFIG_ST" value="63"/>
+      <ServiceSubtype name="ADCS_SAVE_ORBIT_PARAM_ST" value="64"/>
+      <ServiceSubtype name="ADCS_SAVE_IMAGE_ST" value="80">
+        <Parameter name="Camera selection" isLittleEndian="true" type="byte"/>
+        <Parameter name="Image size selection" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_UPDATE_TLM_ELEMENT_AT_INDEX_ST" value="90">
+        <Parameter name="index" isLittleEndian="true" type="byte"/>
+        <Parameter name="Save Telemetry flag at index" isLittleEndian="true" type="byte"/>
+        <Parameter name="Save Time Period" isLittleEndian="true" type="byte" unit="[sec]"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_RESET_TLM_ELEMENTS_ST" value="91"/>
+      <ServiceSubtype name="ADCS_SET_TLM_OVERRIDE_FLAG_ST" value="92">
+        <Parameter name="Override Flag" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_ADCS_LOOP_PARAMETERS_ST" value="93">
+        <Parameter name="ADCS Parameter Index" isLittleEndian="true" type="byte"/>
+        <Parameter name="Parameter Data" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_UPDATE_TLM_PERIOD_VEC_ST" value="94">
+        <Parameter name="TLM Periods Array" isLittleEndian="true" type="string" size="18"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_UPDATE_TLM_SAVE_VEC_ST" value="95">
+        <Parameter name="TLM Save Flag Array" isLittleEndian="true" type="string" size="18"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_SET_BOOT_INDEX_ST" value="100">
+        <Parameter name="Boot Program" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_RUN_BOOT_PROGRAM_ST" value="101"/>
+      <ServiceSubtype name="ADCS_GET_GENERAL_INFO_ST" value="128"/>
+      <ServiceSubtype name="ADCS_GET_BOOT_PROGRAM_INFO_ST" value="130"/>
+      <ServiceSubtype name="ADCS_GET_CURR_UNIX_TIME_ST" value="140"/>
+      <ServiceSubtype name="ADCS_GET_SRAM_LATCHUP_COUNTERS_ST" value="142"/>
+      <ServiceSubtype name="ADCS_GET_EDAC_COUNTERS_ST" value="143"/>
+      <ServiceSubtype name="ADCS_GET_COMM_STATUS_ST" value="144"/>
+      <ServiceSubtype name="ADCS_GET_CURRENT_STATE_ST" value="145"/>
+      <ServiceSubtype name="ADCS_GET_EST_ANG_ST" value="146"/>
+      <ServiceSubtype name="ADCS_GET_EST_ANG_RATE_ST" value="147"/>
+      <ServiceSubtype name="ADCS_GET_SATELLITE_POSITION_ST" value="150"/>
+      <ServiceSubtype name="ADCS_GET_MAGNETIC_FIELD_VEC_ST" value="151"/>
+      <ServiceSubtype name="ADCS_GET_COARSE_SUN_VEC_ST" value="152"/>
+      <ServiceSubtype name="ADCS_GET_FINE_SUN_VEC_ST" value="153"/>
+      <ServiceSubtype name="ADCS_GET_NADIR_VECTOR_ST" value="154"/>
+      <ServiceSubtype name="ADCS_GET_SENSOR_RATES_ST" value="155"/>
+      <ServiceSubtype name="ADCS_GET_WHEEL_SPEED_ST" value="156"/>
+      <ServiceSubtype name="ADCS_GET_MAGNETORQUER_CMD_ST" value="157"/>
+      <ServiceSubtype name="ADCS_GET_WHEEL_SPEED_CMD_ST" value="158"/>
+      <ServiceSubtype name="ADCS_GET_RAW_CSS_1_6_MEASURMENTS_ST" value="168"/>
+      <ServiceSubtype name="ADCS_GET_RAW_CSS_7_10_MEASURMENTS_ST" value="169"/>
+      <ServiceSubtype name="ADCS_GET_RAW_MAGNETOMETER_MEAS_ST" value="170"/>
+      <ServiceSubtype name="ADCS_GET_C_SENSE_CURRENT_MEASUREMENTS_ST" value="171"/>
+      <ServiceSubtype name="ADCS_GET_C_CONTROL_CURRENT_MEASUREMENTS_ST" value="172"/>
+      <ServiceSubtype name="ADCS_GET_WHEEL_CURRENTS_TLM_ST" value="173"/>
+      <ServiceSubtype name="ADCS_GET_ADCS_TEMPERATURE_TLM_ST" value="174"/>
+      <ServiceSubtype name="ADCS_GET_RATE_SENSOR_TEMP_TLM_ST" value="175"/>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_STATUS_ST" value="176"/>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_TIME_ST" value="177"/>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_X_ST" value="178"/>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_Y_ST" value="179"/>
+      <ServiceSubtype name="ADCS_GET_RAW_GPS_Z_ST" value="180"/>
+      <ServiceSubtype name="ADCS_GET_STATE_TLM_ST" value="190"/>
+      <ServiceSubtype name="ADCS_GET_ADCS_MEASUREMENTS_ST" value="191"/>
+      <ServiceSubtype name="ADCS_GET_ACTUATORS_CMDS_ST" value="192"/>
+      <ServiceSubtype name="ADCS_GET_ESTIMATION_METADATA_ST" value="193"/>
+      <ServiceSubtype name="ADCS_GET_SENSOR_MEASUREMENTS_ST" value="194"/>
+      <ServiceSubtype name="ADCS_GET_POW_TEMP_MEAS_TLM_ST" value="195"/>
+      <ServiceSubtype name="ADCS_GET_ADCS_EXC_TIMES_ST" value="196"/>
+      <ServiceSubtype name="ADCS_GET_PWR_CTRL_DEVICE_ST" value="197"/>
+      <ServiceSubtype name="ADCS_GET_MISC_CURRENT_MEAS_ST" value="198"/>
+      <ServiceSubtype name="ADCS_GET_COMMANDED_ATTITUDE_ANGLES_ST" value="199"/>
+      <ServiceSubtype name="ADCS_GET_FULL_CONFIG_ST" value="206"/>
+      <ServiceSubtype name="ADCS_GET_SGP4_ORBIT_PARAMETERS_ST" value="207"/>
+      <ServiceSubtype name="ADCS_GET_ADCS_RAW_GPS_MEAS_ST" value="210"/>
+      <ServiceSubtype name="ADCS_GET_STAR_TRACKER_TLM_ST" value="211"/>
+      <ServiceSubtype name="ADCS_GET_ADC_RAW_RED_MAG_ST" value="215"/>
+      <ServiceSubtype name="ADCS_GET_ACP_EXECUTION_STATE_ST" value="220"/>
+      <ServiceSubtype name="ADCS_GET_TLM_SAVE_VECTOR_ST" value="246"/>
+      <ServiceSubtype name="ADCS_GET_PERIOD_VECTOR_ST" value="247"/>
+      <ServiceSubtype name="ADCS_GET_LAST_SAVE_TIMES_ST" value="248"/>
+      <ServiceSubtype name="ADCS_GET_OPERATING_FLAGS_ST" value="249"/>
+      <ServiceSubtype name="ADCS_GET_TLM_ELEM_AT_INDEX_ST" value="250">
+        <Parameter name="Index Of Parameter" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_ADCS_CONFIG_PARAM_ST" value="251">
+        <Parameter name="Parameter Offset" isLittleEndian="false" type="uint16"/>
+        <Parameter name="Parameter Length" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="ADCS_GET_TLM_OVERRIDE_FLAG_ST" value="252"/>
+    </ServiceType>
+    <ServiceType name="Imaging" value="251">
+      <ServiceSubtype name="Send Image chunk range" value="1">
+        <Parameter name="id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="groundFileType" isLittleEndian="true" type="byte" rangeStart="0" rangeEnd="7"/>
+        <Parameter name="start chunk" isLittleEndian="true" type="uint16"/>
+        <Parameter name="end chunk" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Send Image bitField" value="2">
+        <Parameter name="id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="groundFileType" isLittleEndian="true" type="byte" rangeStart="0" rangeEnd="7"/>
+        <Parameter name="start chunk" isLittleEndian="true" type="uint16"/>
+        <Parameter name="bitField" isLittleEndian="true" type="string" size="183"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Take Photograph" value="3">
+        <Parameter name="testPattern" isLittleEndian="true" type="byte"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Take Photograph with Special Values" value="4">
+        <Parameter name="testPattern" isLittleEndian="true" type="byte"/>
+        <Parameter name="frameAmount" isLittleEndian="true" type="uint32"/>
+        <Parameter name="frameRate" isLittleEndian="true" type="uint32"/>
+        <Parameter name="adcGain" isLittleEndian="true" type="byte"/>
+        <Parameter name="pgaGain" isLittleEndian="true" type="byte"/>
+        <Parameter name="sensorOffset" isLittleEndian="true" type="uint16"/>
+        <Parameter name="exposureValue" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Take Photographs with Time Intervals" value="5">
+        <Parameter name="number of pictures" isLittleEndian="true" type="uint32"/>
+        <Parameter name="time between pictures" isLittleEndian="true" type="uint32" unit="unix"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Update Photography Values" value="6">
+        <Parameter name="frameAmount" isLittleEndian="true" type="uint32"/>
+        <Parameter name="frameRate" isLittleEndian="true" type="uint32"/>
+        <Parameter name="adcGain" isLittleEndian="true" type="byte"/>
+        <Parameter name="pgaGain" isLittleEndian="true" type="byte"/>
+        <Parameter name="sensorOffset" isLittleEndian="true" type="uint16"/>
+        <Parameter name="exposureValue" isLittleEndian="true" type="uint32"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Delete Image File" value="7">
+        <Parameter name="id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="groundFileType" isLittleEndian="true" type="byte" rangeStart="0" rangeEnd="7"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Delete Image" value="8">
+        <Parameter name="id" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Transfer to OBC" value="9">
+        <Parameter name="id" isLittleEndian="true" type="uint16"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Create Thumbnail" value="10">
+        <Parameter name="id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="reductionLevel" isLittleEndian="true" type="byte" rangeStart="1" rangeEnd="6"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Create JPG" value="11">
+        <Parameter name="id" isLittleEndian="true" type="uint16"/>
+        <Parameter name="quality" isLittleEndian="true" type="byte" rangeStart="1" rangeEnd="100"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Reset ImageDataBase" value="12"/>
+      <ServiceSubtype name="Download ImageDataBase" value="13">
+        <Parameter name="startTime" isLittleEndian="true" type="datetime" unit="seconds"/>
+        <Parameter name="endTime" isLittleEndian="true" type="datetime" unit="seconds"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Image FileType Dump" value="14">
+        <Parameter name="startTime" isLittleEndian="true" type="datetime" unit="seconds"/>
+        <Parameter name="endTime" isLittleEndian="true" type="datetime" unit="seconds"/>
+        <Parameter name="file type" isLittleEndian="true" type="byte" rangeStart="0" rangeEnd="7"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="update duration" value="15">
+        <Parameter name="new duration" isLittleEndian="true" type="uint32" unit="seconds"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Set Chunk Size" value="16">
+        <Parameter name="Chunk Width" isLittleEndian="true" type="uint16" unit="0"/>
+        <Parameter name="Chunk Height" isLittleEndian="true" type="uint16" unit="0"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Stop Taking Photographs with Time Intervals" value="17"/>
+      <ServiceSubtype name="Turn Off Gecko" value="18"/>
+      <ServiceSubtype name="Turn On Gecko" value="19"/>
+      <ServiceSubtype name="Turn Off Auto Thumbnail Creation for Future Images" value="20"/>
+      <ServiceSubtype name="Turn On Auto Thumbnail Creation for Future Images" value="21"/>
+      <ServiceSubtype name="Turn Off Auto Thumbnail Creation" value="22"/>
+      <ServiceSubtype name="Turn On Auto Thumbnail Creation" value="23"/>
+      <ServiceSubtype name="Get Gecko Registers" value="24"/>
+      <ServiceSubtype name="Set Gecko Registers" value="25">
+        <Parameter name="Register Index" isLittleEndian="true" type="byte" unit="0"/>
+        <Parameter name="Register Value" isLittleEndian="true" type="uint32" unit="0"/>
+      </ServiceSubtype>
+      <ServiceSubtype name="Re Init Cam Manager" value="26"/>
+    </ServiceType>
+  </Telecommands>
+  <TelemetryCals>
+    <Calibration id="1" name="basiccal" type="polynomial" A1="1" A0="0" function="x" solution="y"/>
+    <Calibration id="2" name="mode" type="options">
+      <Option name="error" value="0"/>
+      <Option name="val1" value="1"/>
+      <Option name="val2" value="2"/>
+      <Option name="val3" value="3"/>
+    </Calibration>
+    <Calibration id="4" name="temp" type="polynomial" A1="0.01" A0="0" function="x" solution="y"/>
+    <Calibration id="5" name="trxvu-rssi" type="polynomial" A1="0.03" A0="-152" function="x" solution="y"/>
+    <Calibration id="6" name="trxvu-doppler" type="polynomial" A1="13.352" A0="-22300" function="x" solution="y"/>
+    <Calibration id="7" name="trxvu-temps" type="polynomial" A1="-0.07669" A0="195.6037" function="x" solution="y"/>
+    <Calibration id="8" name="trxvu-bus-voltage" type="polynomial" A1="0.00488" A0="0" function="x" solution="y"/>
+    <Calibration id="9" name="trxvu-bus-current" type="polynomial" A1="0.16643964" A0="0" function="x" solution="y"/>
+    <Calibration id="10" name="solar-panels" type="polynomial" A1="0.0009765625" A0="0" function="x" solution="y"/>
+    <Calibration id="11" name="adcs1 cal" type="polynomial" A1="0.0001" A0="0" function="x" solution="y"/>
+    <Calibration id="12" name="adcs2 cal" type="polynomial" A1="10" A0="0" function="x" solution="y"/>
+    <Calibration id="13" name="adcs3 cal" type="polynomial" A1="0.1" A0="0" function="x" solution="y"/>
+    <Calibration id="14" name="adcs4 cal" type="polynomial" A1="0.48828125" A0="0" function="x" solution="y"/>
+    <Calibration id="98" name="adcs5 cal" type="polynomial" A1="0.001" A0="0" function="x" solution="y"/>
+    <Calibration id="99" name="adcs6 cal" type="polynomial" A1="0.25" A0="0" function="x" solution="y"/>
+    <Calibration id="15" name="4bit" type="options">
+      <Option name="ranparameter0" value="0"/>
+      <Option name="ranparameter1" value="1"/>
+      <Option name="ranparameter2" value="2"/>
+      <Option name="ranparameter3" value="3"/>
+      <Option name="ranparameter0" value="4"/>
+      <Option name="ranparameter1" value="5"/>
+      <Option name="ranparameter2" value="6"/>
+      <Option name="ranparameter3" value="7"/>
+      <Option name="ranparameter0" value="8"/>
+      <Option name="ranparameter1" value="9"/>
+      <Option name="ranparameter2" value="10"/>
+      <Option name="ranparameter3" value="11"/>
+      <Option name="ranparameter0" value="12"/>
+      <Option name="ranparameter1" value="13"/>
+      <Option name="ranparameter2" value="14"/>
+      <Option name="ranparameter3" value="15"/>
+    </Calibration>
+    <Calibration id="16" name="2bit" type="options">
+      <Option name="ranparameter0" value="0"/>
+      <Option name="ranparameter1" value="1"/>
+      <Option name="ranparameter2" value="2"/>
+      <Option name="ranparameter3" value="3"/>
+    </Calibration>
+    <Calibration id="17" name="1bit" type="options">
+      <Option name="ADCS Error Flags0" value="0"/>
+      <Option name="ADCS Error Flags1" value="1"/>
+    </Calibration>
+    <Calibration id="18" name="3bit" type="options">
+      <Option name="ranparameter0" value="0"/>
+      <Option name="ranparameter1" value="1"/>
+      <Option name="ranparameter2" value="2"/>
+      <Option name="ranparameter3" value="3"/>
+      <Option name="ranparameter0" value="4"/>
+      <Option name="ranparameter1" value="5"/>
+      <Option name="ranparameter2" value="6"/>
+      <Option name="ranparameter3" value="7"/>
+    </Calibration>
+    <Calibration id="19" name="Ants-temp" type="polynomial" A1="-0.2922" A0="190.65" function="x" solution="y"/>
+  </TelemetryCals>
+  <TelecommandCals>
+    <Calibration id="3" name="basiccal_telecommands" type="polynomial" A1="1" A0="0" function="x" solution="y"/>
+    <Calibration id="52" name="1bit" type="options">
+      <Option name="ADCS Error Flags0" value="0"/>
+      <Option name="ADCS Error Flags1" value="1"/>
+    </Calibration>
+    <Calibration id="53" name="2bit" type="options">
+      <Option name="ranparameter0" value="0"/>
+      <Option name="ranparameter1" value="1"/>
+      <Option name="ranparameter2" value="2"/>
+      <Option name="ranparameter3" value="3"/>
+    </Calibration>
+    <Calibration id="54" name="3bit" type="options">
+      <Option name="ranparameter0" value="0"/>
+      <Option name="ranparameter1" value="1"/>
+      <Option name="ranparameter2" value="2"/>
+      <Option name="ranparameter3" value="3"/>
+      <Option name="ranparameter4" value="4"/>
+      <Option name="ranparameter5" value="5"/>
+      <Option name="ranparameter6" value="6"/>
+      <Option name="ranparameter7" value="7"/>
+    </Calibration>
+    <Calibration id="55" name="6bit" type="options">
+      <Option name="not used0" value="0"/>
+      <Option name="not used1" value="1"/>
+      <Option name="not used2" value="2"/>
+      <Option name="not used3" value="3"/>
+      <Option name="not used4" value="4"/>
+      <Option name="not used5" value="5"/>
+      <Option name="not used6" value="6"/>
+      <Option name="not used7" value="7"/>
+      <Option name="not used8" value="8"/>
+      <Option name="not used9" value="9"/>
+      <Option name="not used10" value="10"/>
+      <Option name=" not used11" value="11"/>
+      <Option name="not used12" value="12"/>
+      <Option name="not used13" value="13"/>
+      <Option name="not used14" value="14"/>
+      <Option name="not used15" value="15"/>
+      <Option name="not used16" value="16"/>
+      <Option name="not used17" value="17"/>
+      <Option name="not used18" value="18"/>
+      <Option name="not used19" value="19"/>
+      <Option name="not used20" value="20"/>
+      <Option name="not used21" value="21"/>
+      <Option name="not used22" value="22"/>
+      <Option name="not used23" value="23"/>
+      <Option name="not used24" value="24"/>
+      <Option name="not used25" value="25"/>
+      <Option name="not used26" value="26"/>
+      <Option name="not used27" value="27"/>
+      <Option name="not used28" value="28"/>
+      <Option name="not used29" value="29"/>
+      <Option name="not used30" value="30"/>
+      <Option name="not used31" value="31"/>
+      <Option name="not used32" value="0"/>
+      <Option name="not used33" value="1"/>
+      <Option name="not used34" value="2"/>
+      <Option name="not used35" value="3"/>
+      <Option name="not used36" value="4"/>
+      <Option name="not used37" value="5"/>
+      <Option name="not used38" value="6"/>
+      <Option name="not used39" value="7"/>
+      <Option name="not used40" value="8"/>
+      <Option name="not used41" value="9"/>
+      <Option name="not used42" value="10"/>
+      <Option name=" not used43" value="11"/>
+      <Option name="not used144" value="12"/>
+      <Option name="not used45" value="13"/>
+      <Option name="not used46" value="14"/>
+      <Option name="not used47" value="15"/>
+      <Option name="not used48" value="16"/>
+      <Option name="not used49" value="17"/>
+      <Option name="not used50" value="18"/>
+      <Option name="not used51" value="19"/>
+      <Option name="not used52" value="20"/>
+      <Option name="not used53" value="21"/>
+      <Option name="not used54" value="22"/>
+      <Option name="not used55" value="23"/>
+      <Option name="not used56" value="24"/>
+      <Option name="not used57" value="25"/>
+      <Option name="not used58" value="26"/>
+      <Option name="not used59" value="59"/>
+      <Option name="not used60" value="60"/>
+      <Option name="not used61" value="61"/>
+      <Option name="not used62" value="62"/>
+      <Option name="not used63" value="63"/>
+      <Option name="not used64" value="64"/>
+    </Calibration>
+  </TelecommandCals>
+</GSCMIB>

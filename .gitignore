@@ -1,0 +1,6 @@
+# Gitingnore include the data which is uniqe to the satellite groups
+
+**/AlternativeStorage
+**/CommandForms
+**/MissionInformation
+**/GSC-EndNode/GSC-EndNode.dll.config

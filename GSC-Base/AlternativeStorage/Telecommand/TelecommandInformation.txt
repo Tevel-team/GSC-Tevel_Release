@@ -1,0 +1,2 @@
+Telecommand information
+The telecommand folder contains the history of commands that were sent to the satellite using the base running.

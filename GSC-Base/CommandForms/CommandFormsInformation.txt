@@ -1,0 +1,3 @@
+Command Forms Information
+This is the folder containing possible commands to be sent to the satellite.
+The base creates the commands automaticlly, using the command "blank_forms"
